@@ -1,6 +1,10 @@
 # Improving Population Health by Testing Insulin Sensitivity to Predict Type 2 Diabetes
-The current method of identifying and measuring Type 2 Diabetes is almost exclusively based on testing the standard A1C blood glucose test. However, this method alone can result in missing the long window of early detection for the disease, as blood glucose will usually only begin to rise once the person is already insulin-resistant, indicating that their mechanism of keeping blood sugar in check has already become ineffective. Early detection and treatment of the progression towards Type 2 Diabetes is essential for the improvement of personal and public health. 
-
+The current method of measuring and diagnosing Type 2 Diabetes is primarily based on the standard A1C blood glucose test. However, this method alone can result in missing the 
+long window of early detection for the disease by years or even decades, as blood glucose will typically only rise once a person is already insulin-resistant, meaning that their 
+mechanism of keeping blood sugar within a normal range has already become compromised. Early detection and treatment is essential for the improvement of individual health outcomes 
+as well as reducing the population burden of the disease. By increasing the prevalence of insulin sensitivity testing, at-risk individuals could recieve earlier interventions and 
+ultimately achieve greater health outcomes.
+ 
 
 ## Objective
 
@@ -33,12 +37,9 @@ The current method of identifying and measuring Type 2 Diabetes is almost exclus
 - [Demographics Documentation](https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/DEMO_L.htm#RIDAGEYR)
 - [Physical Examination Documentation](https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/BMX_L.htm#BMXBMI)
 
-### Great Information
+### Great Information & Calculations
 - [Insulin Resistance and Prediabetes (NIH)](https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/prediabetes-insulin-resistance)
-
-
-### Calculations
 - [A1C Blood Glucose Thresholds (Diabetes.org)](https://diabetes.org/about-diabetes/a1c)
-- [HOMA-IR Insulin Sensitivity]()
-- [HOMA-IR Interpretations](https://thebloodcode.com/homa-ir-know/)
+- [HOMA-IR Insulin Sensitivity Information & Calculation](https://en.wikipedia.org/wiki/Homeostatic_model_assessment) [(2)](https://www.omnicalculator.com/health/homa-ir#what-is-homa-ir-homa-formula-calculation)
+- [HOMA-IR Insulin Sensitivity Thresholds](https://thebloodcode.com/homa-ir-know/) [(2)](https://drlogy.com/calculator/homa-ir)
 - [BMI Thresholds (CDC)](https://www.cdc.gov/bmi/adult-calculator/bmi-categories.html)
