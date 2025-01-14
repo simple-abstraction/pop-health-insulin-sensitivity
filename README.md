@@ -84,26 +84,31 @@ With the data ready for analysis, the following questions are under consideratio
 ### Diabetes vs Insulin Resistance by Age Group
 ![Diabetes vs Insulin Resistance by Age Group](./analysis/Diabetes%20vs%20Insulin%20Resistance%20by%20Age%20Group.jpg)
 
+- This chart not only shows how diabetes and insulin resistance change as age increases, but it also shows which category is the most predominant for a given age group.
+- The predominant groups for the first 3 decades of life are a healthy response and insulin sensitivity. It is very unlikely to experience elevated blood sugar at an early age, and could potentially be explained entirely by Type 1 Diabetes (which is present from birth).
+- It appears that, in general, healthiness peaks between age 30-40, and insulin resistance only begins to decline in favor of elevated blood sugar & insulin together, with a reversal between the prominence of health and diabetes at age 50. Elevated blood sugar & insulin remains the most prominent category for all older age groups after age 50, with the total population across all categories experiencing a sharp drop off with respect to incrasing age. 
 
 ### Diabetes vs Insulin Resistance by BMI
 ![Diabetes vs Insulin Resistance by BMI](./analysis/Diabetes%20vs%20Insulin%20Resistance%20by%20BMI.jpg)
 
+- The final chart shows how Diabetes and Insulin Resistance change over time as BMI increases. In contract with the previous chart, this does not factor in age group.
+- There seems to be a clear relationship between healthy weight and healthy blood sugar and insulin response. However, even at a normal weight, there is a non-insignificant degree of insulin resistance. In the progression to overweight or obese (1), there is a reversal in the prominence of healthy and not.
+- Although the lines seem to decrease towards the end, this is more representative of a smaller population of extremely overweight folks, but we can still see that elevated resistance & blood sugar has an inverse relationship with healthy resistance and blood sugar (with the population difference being multiple times larger than in lower weights). 
+
+This analysis provides an extremely insightful view of diabetes and its factors across the US population.
 
 ## Conclusion 
-This analysis provides an extremely insightful view into diabetes across the population. 
 
-Insights:
-- Approximately 35% of the population is experiencing insulin resistance but is not yet experiencing elevated blood sugar.  
-- We can indeed confirm that insulin resistance precedes diabetes
-- We can also confirm that greater insulin testing would be valuable
-- We can 
+In summary:
+- We can indeed confirm that insulin resistance does indeed precede the onset of diabetes by a measurable degree, with about 35% of the population experiencing insulin resistance but not yet having elevated blood sugar, often from a young age. If these folks were given an A1C blood sugar test, they would test in the normal range.
+- Although there aren't many studies on the subject, one article suggests that 50% of participants in their study want to eat healthy, exercise more, and take medication, all three of which are recommended for those with diabetes [1](https://www.diabetes.co.uk/news/2024/apr/lifestyle-changes-are-common-among-those-with-type-2-diabetes.html?). It is not clear how many actually make quantifiable lifestyle changes after recieving a diagnosis, but given that lifestyle changes often take a long time (often years) to fully materialize, the earlier we can tell the 35% of the population experiencing insulin resistance that they're at-risk the better. An even better approach would be to improve the societal factors that encourage the development of diabetes and obesity, which is an infinitely more complex public health problem to address.
 
-
-conclude that earlier testing would indeed help to identify a subset of the at-risk population 
-share the highlights from the rest of the analysis I've done (references to percentages and fun facts)
-share obstacles to improving public health, from educating the medical community and the general public on preventative health, insurers actually covering non-a1c tests, to high-sugar diets (which have economic and agricultural considerations, given food subsidies on corn and grain make them common and affordable in our diets, which may explain why we see insulin resistance even from a young age), and other factors in the obesity epidemic (such as rise in a sedentary lifestyle caused by things such as more desk jobs and widely accessible mass entertainment)
-other random questions to explore - e.g. nhanes does not measure medications or record actual diagnoses, but there are such a large number of people in the US with diabetes (reference study) that many of them are surely taking medications like metformin that increase insulin sensitivity (who may not have healthy a1c unless there's early and consistent lifestyle change), and in the data this might look like those with high a1c but low sensitivity (which is surprising given that insulin resistance precedes diabetes but could be explained by diabetes medications that treat insulin sensitivity).... also, measuring other risk factors for diabetes.... 
-
+A few obstacles to improving public health include:
+- Educating the medical community that insulin sensitivity precedes diabetes and that it can be tested
+- Encouraging insurers to actually cover the fasting glucose and insulin tests instead of just the A1C test, which is often a barrier
+- Educating the general public on Type 2 Diabetes in a way that contextualizes the severity of present unhealthy behaviors as major contributors to a decline in health with age 
+- The affordability, accessibility, and prevalence of high-carb diets (which have agricultural and economic implications, given that heavily subsidized crops like corn and grain are in many of our foods, and may also explain why we see high insulin resistance even from a young age, suggesting that many people are not suited for high-carb diets and end up unknowingly facing the consequences)
+- Other factors contributing to the obesity epidemic, such as a rise in sedentary lifestyle (caused by an increase in desk jobs, widely accessible mass entertainment, and more)
 
 
 ## Various Resources  
