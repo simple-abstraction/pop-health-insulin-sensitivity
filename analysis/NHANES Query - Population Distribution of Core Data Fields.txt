@@ -1,0 +1,11 @@
+-- Population Distribution of Core Data Fields (individually)  
+SELECT
+    -- a1c_threshold AS "Diabetes",                        -- blue
+    -- insulin_sensitivity AS "Insulin Resistance",        -- green
+    -- age_cohort AS "Age Group",                          -- yellow
+    -- bmi_threshold AS "BMI",                       -- purple
+    (SUM(normalized_weight) / AVG(total_pop)) AS "Population (%)"
+FROM nhanes_data
+GROUP BY 1
+ORDER BY 2 DESC              -- to display by population, descending 
+-- ORDER BY 1 ASC                  -- to display age groups and BMI in ascending order 

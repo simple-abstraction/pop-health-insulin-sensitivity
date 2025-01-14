@@ -26,9 +26,9 @@ The disease impacts a significant portion of the US (and global) population, and
 Although not in the scope of this analysis, Type 1 Diabetes is an autoimmune condition that occurs at birth, impacts a much smaller percentage of the population, and represents significantly less population burden.
 
 ## An Overview of the NHANES Survey
-The NHANES (National Health and Nutrition Examination Survey) is a long-running effort from the CDC to release health data for public use in multi-year cycles. The data is used by government agencies, organizations, and businesses as well as for academic use by instutitions and students. The various surveys administered (broken into "components") are meant to be able to represent the majority of the US population. It excludes people that...
+The NHANES (National Health and Nutrition Examination Survey) is a long-running effort from the CDC to release health data for public use in multi-year cycles. The data is used by government agencies, organizations, and businesses as well as for academic use by instutitions and students. The various surveys administered (broken into "components") are meant to be able to represent the majority of the US population (US citizens, non-institutionalized).
 
-The data is available in "components", which include a number of data fields and a population weight that can be used to show how representative a given survey participant is of the entire US population (which is determined by the awesome statisticians behind the effort to abstract out complex demographic and response information). By joining data across different components and normalizing the population weight across one's filtered data, one can craft a targeted analyis within the scope of anything that the NHANES survey measures.
+The data is available in "components", which include a number of data fields and a population weight that can be used to show how representative a given survey participant is of the entire US population (which is determined by the statisticians behind the effort to abstract out complex demographic and response factors). By joining data across different components and normalizing the population weight to one's filtered data, one can craft a targeted analyis within the scope of anything that the NHANES survey measures.
 
 For this effort, we will be looking at the following components: [Glycohemoglobin](https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/GHB_L.htm#WTPH2YR) (A1C), [Plasma Fasting Glucose](https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/GLU_L.htm) and [Insulin](https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/INS_L.htm) (both needed to calculate Insulin Sensitivity), [Demographics](https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/DEMO_L.htm#RIDAGEYR) (specifically for Age), and [Examination](https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/BMX_L.htm#BMXBMI) (specifically for BMI). 
 
@@ -45,6 +45,12 @@ After downloading the datasets from the respective components, the following ste
     - BMI (From underweight to the increasing levels of obesity, as defined by the CDC)
 6. Final cleaning, review, and load into database
 
+![The Python Notebook for this ETL is available for review and use.](./python/nhanes_data_etl_public.ipynb) 
+
+![The raw NHANES datasets are available here.](./data/raw/) 
+
+![The final, cleaned dataset is available here.](./data/clean/nhanes_data.csv)
+
 ## Analyzing the Data
 With the data ready for analysis, the following questions are under consideration:
 1. How are each of our 4 core data fields (Diabetes, Insulin Sensitivity, Age, and BMI) distributed across the population?
@@ -52,6 +58,32 @@ With the data ready for analysis, the following questions are under consideratio
 3. What is the relationship between Diabetes and Insulin Resistance within the context of Age and BMI, two major risk factors for Diabetes?
 4. What is the subset of the population experiencing Insulin Resistance but does not yet have elevated A1C? 
 
+### Population Distribution of Diabetes
+![Population Distribution of Diabetes](./analysis/Population%20Distribution%20of%20Diabetes.jpg)
+
+
+### Population Distribution of Insulin Resistance
+![Population Distribution of Insulin Resistance](./analysis/Population%20Distribution%20of%20Insulin%20Resistance.jpg)
+
+
+### Population Distribution by Age Group
+![Population Distribution by Age Group](./analysis/Population%20Distribution%20of%20Age%20Groups.jpg)
+
+
+### Population Distribution by BMI
+![Population Distribution by BMI](./analysis/Population%20Distribution%20of%20BMI.jpg)
+
+
+### Diabetes vs Insulin Resistance
+![Diabetes vs Insulin Resistance](./analysis/Diabetes%20vs%20Insulin%20Resistance.jpg)
+
+
+### Diabetes vs Insulin Resistance by Age Group
+![Diabetes vs Insulin Resistance by Age Group](./analysis/Diabetes%20vs%20Insulin%20Resistance%20by%20Age%20Group.jpg)
+
+
+### Diabetes vs Insulin Resistance by BMI
+![Diabetes vs Insulin Resistance by BMI](./analysis/Diabetes%20vs%20Insulin%20Resistance%20by%20BMI.jpg)
 
 
 ## Conclusion 
@@ -59,7 +91,7 @@ With the data ready for analysis, the following questions are under consideratio
 
 
 
-## Additional Resources  
+## Various Resources  
 ### [The CDC's National Health and Nutrition Examination Survey (NHANES) 2021 to 2023 Cycle](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?Cycle=2021-2023)
 - [Brief Overview of Sample Design and Analytics Guidelines](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/overviewbrief.aspx?Cycle=2021-2023)
 - [Full Survey Methods and Analytics Guidelines](https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx#analytic-guidelines)
@@ -77,7 +109,7 @@ With the data ready for analysis, the following questions are under consideratio
 - [Diabetes and Healthcare Costs](https://diabetes.org/newsroom/press-releases/new-american-diabetes-association-report-finds-annual-costs-diabetes-be)
 - [Insulin Resistance and Prediabetes (NIH)](https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/prediabetes-insulin-resistance)
 
-### Various Calculations
+### Calculations
 - [A1C Blood Glucose Thresholds (Diabetes.org)](https://diabetes.org/about-diabetes/a1c)
 - [HOMA-IR Insulin Sensitivity Information & Calculation](https://en.wikipedia.org/wiki/Homeostatic_model_assessment) [(2)](https://www.omnicalculator.com/health/homa-ir#what-is-homa-ir-homa-formula-calculation)
 - [HOMA-IR Insulin Sensitivity Thresholds](https://thebloodcode.com/homa-ir-know/) [(2)](https://drlogy.com/calculator/homa-ir)
