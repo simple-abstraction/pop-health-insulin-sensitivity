@@ -6,13 +6,13 @@ as well as reducing the population burden of the disease. By increasing the prev
 ultimately achieve significantly better health outcomes.
  
 
-## Objectives and Goals
-My primary goals for this analysis:
+## Objectives and Goals 
+The primary goals:
  1. To demonstrate with a data-driven approach that insulin resistance, when tested, does indeed precede diabetes
  2. Identify a subset of the US population that could benefit from, and be targeted for, an earlier intervention
  3. Demonstrate data analysis skills by using Python to extract, transform, and load the data and then using SQL and visualization to provide a meaningful assessment of the data 
  
-My secondary goals:
+The secondary goals:
 1) Gain a deeper understanding of diabetes, how it progresses, and how to measure it
 2) Learn more about the NHANES survey and methodology, including working with complex documentation and population weights
 3) Consider the impact of the analysis and other potential areas of exploration
@@ -23,7 +23,7 @@ Type 2 Diabetes is a chronic disease that impacts how the body processes sugar, 
 
 The disease impacts a significant portion of the US (and global) population, and has continued to rise over time [[2]](https://archive.cdc.gov/www_cdc_gov/diabetes/library/reports/reportcard/national-state-diabetes-trends.html?). It is associated with a variety of health challenges; from obesity and deterioration of health and wellness at the individual level, to population level impacts such as loss of productivity [[3]](https://diabetesjournals.org/care/article/45/11/2553/147546/Productivity-Loss-and-Medical-Costs-Associated?) and significant healthcare costs [[4]](https://diabetes.org/newsroom/press-releases/new-american-diabetes-association-report-finds-annual-costs-diabetes-be) (and given that CMS (Centers for Medicare & Medicaid) is the single largest healthcare payer in the United States [[5]](https://www.cms.gov/cms-guide-medical-technology-companies-and-other-interested-parties/payment), that means the government often absorbs this burden).
 
-Although not in the scope of this analysis, Type 1 Diabetes is an autoimmune condition that occurs at birth, impacts a much smaller percentage of the population, and represents significantly less population burden.
+Although not in the scope of this analysis, Type 1 Diabetes is an autoimmune condition that occurs at birth, impacts a smaller percentage of the population, and represents less population burden.
 
 ## An Overview of the NHANES Survey
 The NHANES (National Health and Nutrition Examination Survey) is a long-running effort from the CDC to release health data for public use in multi-year cycles. The data is used by government agencies, organizations, and businesses as well as for academic use by instutitions and students. The various surveys administered (broken into "components") are meant to be able to represent the majority of the US population (US citizens, non-institutionalized).
@@ -60,23 +60,26 @@ With the data ready for analysis, the following questions are under consideratio
 
 ### Population Distribution of Diabetes
 ![Population Distribution of Diabetes](./analysis/Population%20Distribution%20of%20Diabetes.jpg)
-
+- Approximately 70% of the population has a normal blood sugar level, 20% have Prediabetes, and 9% have Diabetes.
 
 ### Population Distribution of Insulin Resistance
 ![Population Distribution of Insulin Resistance](./analysis/Population%20Distribution%20of%20Insulin%20Resistance.jpg)
-
+- Approximately 41% of the population has a normal insulin sensitivity, 20% is experiencing early resistance, and 39% have significant resistance. 
 
 ### Population Distribution by Age Group
 ![Population Distribution by Age Group](./analysis/Population%20Distribution%20of%20Age%20Groups.jpg)
-
+- The population is distributed relatively evenly across age groups.
+- The data is limited to the age range of 12-80 because age 12 was the minimum age to participate in lab work, and NHANES denotes everyone over age 80 as just 80.
 
 ### Population Distribution by BMI
 ![Population Distribution by BMI](./analysis/Population%20Distribution%20of%20BMI.jpg)
-
+- Approximately 30% of the population is a normal weight, 29.5% are overweight, and 38% experience some degree of obesity. Less than 3% are underweight.
 
 ### Diabetes vs Insulin Resistance
 ![Diabetes vs Insulin Resistance](./analysis/Diabetes%20vs%20Insulin%20Resistance.jpg)
-
+- Approximately 35% of the population is healthy, another 35% are experiencing insulin resistance without elevated blood sugar, 24% are experiencing both elevated insulin and blood sugar, and 6.5% are experiencing elevated A1C only.
+- The small percentage of folks with elevated blood sugar but not elevated insulin likely could have two potential explanations. First, it could represent Type 1 Diabetics, whose bodies do not effectively produce insulin, which would explain elevated blood sugar and low insulin resistance. Second, it is possible that folks who are treating their Type 2 Diabetes with a medication like Metformin that increases insulin sensitivity (making it more effective at lowering blood sugar) but does not necessarily directly lower it.
+- This suggests that, while just over a third of the population has a healthy blood sugar and insulin response, just as many are experiencing early insulin resistance, with the remaining 30% experiencing some degree of elevated blood sugar and beta-cell dysfunction.
 
 ### Diabetes vs Insulin Resistance by Age Group
 ![Diabetes vs Insulin Resistance by Age Group](./analysis/Diabetes%20vs%20Insulin%20Resistance%20by%20Age%20Group.jpg)
@@ -87,7 +90,19 @@ With the data ready for analysis, the following questions are under consideratio
 
 
 ## Conclusion 
+This analysis provides an extremely insightful view into diabetes across the population. 
 
+Insights:
+- Approximately 35% of the population is experiencing insulin resistance but is not yet experiencing elevated blood sugar.  
+- We can indeed confirm that insulin resistance precedes diabetes
+- We can also confirm that greater insulin testing would be valuable
+- We can 
+
+
+conclude that earlier testing would indeed help to identify a subset of the at-risk population 
+share the highlights from the rest of the analysis I've done (references to percentages and fun facts)
+share obstacles to improving public health, from educating the medical community and the general public on preventative health, insurers actually covering non-a1c tests, to high-sugar diets (which have economic and agricultural considerations, given food subsidies on corn and grain make them common and affordable in our diets, which may explain why we see insulin resistance even from a young age), and other factors in the obesity epidemic (such as rise in a sedentary lifestyle caused by things such as more desk jobs and widely accessible mass entertainment)
+other random questions to explore - e.g. nhanes does not measure medications or record actual diagnoses, but there are such a large number of people in the US with diabetes (reference study) that many of them are surely taking medications like metformin that increase insulin sensitivity (who may not have healthy a1c unless there's early and consistent lifestyle change), and in the data this might look like those with high a1c but low sensitivity (which is surprising given that insulin resistance precedes diabetes but could be explained by diabetes medications that treat insulin sensitivity).... also, measuring other risk factors for diabetes.... 
 
 
 
