@@ -109,7 +109,7 @@ A few obstacles to improving public health include:
 - Encouraging insurers to actually cover the fasting glucose and insulin tests instead of just the A1C test, which is often a barrier
 - Educating the general public on Type 2 Diabetes in a way that contextualizes the severity of present unhealthy behaviors as major contributors to a decline in health with age 
 - The affordability, accessibility, and prevalence of high-carb diets (which have agricultural and economic implications, given that heavily subsidized crops like corn and grain are in many of our foods, and may also explain why we see high insulin resistance even from a young age, suggesting that many people are not suited for high-carb diets and end up unknowingly facing the consequences)
-- Other factors contributing to the obesity epidemic, such as a rise in sedentary lifestyle (caused by an increase in desk jobs, widely accessible mass entertainment, and more)
+- A rise in sedentary lifestyle (caused by an increase in desk jobs, widely accessible mass entertainment, and more) that contribute to inactivity and obesity.
 
 
 ## Various Resources  
