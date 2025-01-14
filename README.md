@@ -86,14 +86,14 @@ With the data ready for analysis, the following questions are under consideratio
 
 - This chart not only shows how diabetes and insulin resistance change as age increases, but it also shows which category is the most predominant for a given age group.
 - The predominant groups for the first 3 decades of life are a healthy response and insulin sensitivity. It is very unlikely to experience elevated blood sugar at an early age, and could potentially be explained entirely by Type 1 Diabetes (which is present from birth).
-- It appears that, in general, healthiness peaks between age 30-40, and insulin resistance only begins to decline in favor of elevated blood sugar & insulin together, with a reversal between the prominence of health and diabetes at age 50. Elevated blood sugar & insulin remains the most prominent category for all older age groups after age 50, with the total population across all categories experiencing a sharp drop off with respect to incrasing age. 
+- It appears that, in general, healthiness peaks between age 30-40, and insulin resistance only begins to decline in favor of elevated blood sugar & insulin together, with a reversal between the prominence of health and diabetes at age 50. Elevated blood sugar & insulin resistance remains the most prominent category for all older age groups after age 50, with the total population across all categories experiencing a sharp drop off with respect to increasing age. 
 
 ### Diabetes vs Insulin Resistance by BMI
 ![Diabetes vs Insulin Resistance by BMI](./analysis/Diabetes%20vs%20Insulin%20Resistance%20by%20BMI.jpg)
 
-- The final chart shows how Diabetes and Insulin Resistance change over time as BMI increases. In contract with the previous chart, this does not factor in age group.
-- There seems to be a clear relationship between healthy weight and healthy blood sugar and insulin response. However, even at a normal weight, there is a non-insignificant degree of insulin resistance. In the progression to overweight or obese (1), there is a reversal in the prominence of healthy and not.
-- Although the lines seem to decrease towards the end, this is more representative of a smaller population of extremely overweight folks, but we can still see that elevated resistance & blood sugar has an inverse relationship with healthy resistance and blood sugar (with the population difference being multiple times larger than in lower weights). 
+- The final chart shows how Diabetes and Insulin Resistance change over time as BMI increases. In contrast with the previous chart, this does not factor in age group.
+- There seems to be a clear relationship between healthy weight and healthy blood sugar & insulin response. However, even at a normal weight, there is a non-insignificant degree of insulin resistance. In the progression to overweight or obese (1), there is a reversal in the prominence of healthy and unhealthy.
+- Although the lines seem to decrease towards the end, this is more representative of a smaller population of extremely overweight folks, but we can still see that elevated resistance & blood sugar has an inverse relationship with healthy resistance and blood sugar (with the population difference being multiple times larger than in lower BMI groups). 
 
 This analysis provides an extremely insightful view of diabetes and its factors across the US population.
 
