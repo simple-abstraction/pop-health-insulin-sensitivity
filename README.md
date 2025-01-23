@@ -99,7 +99,7 @@ Figure 2.1 will evaluate the entire population. Given that Age and BMI are both 
 ### Figure 2.4: Likelihood of Overall Beta-Cell Health or Dysfunction by Age Group
 ![Figure 2.4: Likelihood of Overall Beta-Cell Health or Dysfunction by Age Group](./analysis/Figure%202.4%20Likelihood%20of%20Overall%20Beta-Cell%20Health%20or%20Dysfunction%20by%20Age%20Group.jpg)
 - This chart is similar to the previous, but it is simpler - it only shows those who are healthy (*normal blood sugar and insulin sensitivity*) compared to those who have some form and degree of beta-cell dysfunction (*any combination of elevated blood sugar OR insulin*). The previous insights and hypotheses are also visible here. 
-- Aside from the alarming spike in the 12-20 age group, the prevalence of dysfunction increases slowly and consistently with age, with a notably sharp increase around age 50. There is likely research using historical data that can align the sharp increases we see here with sigificant changes that happened at these respective periods in time (i.e. around the years 1970 and 2000 in particular). 
+- Aside from the alarming spike in the 12-20 age group, the prevalence of dysfunction increases slowly and consistently with age, with a notably sharp increase around age 50. There is likely research using historical data that can align the sharp increases we see here with sigificant changes that happened at these respective periods in time (in particular, after the years 1970 and then 2000). 
 - With all forms of dysfunction grouped together, it is clear that beta-cell dysfunction as a whole remains the most likely state for all age groups.
 
 ### Figure 2.5: Population Distribution of Factors in Beta Cell Health and Dysfunction by BMI
