@@ -76,8 +76,8 @@ With the data ready for analysis, the following questions are under consideratio
 ![Figure 1.4: Population Distribution by BMI](./analysis/Figure%201.4%20Population%20Distribution%20by%20BMI.jpg)
 - Approximately 30% of the population is a normal weight, 29.5% are overweight, and 38% experience some degree of obesity. Less than 3% are underweight.
 
-### **Evalulating beta-cell health and dysfunction 
-Figure 1 will evaluate the entire population. Given that Age and BMI are both significant risk factors for Type 2 Diabetes, Figures 2-4 will evaluate health and dysfunction by Age Group, and Figures 5-7 will evaluate by BMI instead of Age Group.
+### Evalulating beta-cell health and dysfunction
+Figure 2.1 will evaluate the entire population. Given that Age and BMI are both significant risk factors for Type 2 Diabetes, Figures 2.2-2.4 will evaluate health and dysfunction by Age Group, and Figures 2.5-2.7 will evaluate by BMI instead of Age Group.
 
 #### Figure 2.1: Population Distribution of Factors in Beta Cell Health and Dysfunction
 ![Figure 2.1: Population Distribution of Factors in Beta Cell Health and Dysfunction](./analysis/Figure%202.1%20Population%20Distribution%20of%20Factors%20in%20Beta%20Cell%20Health%20and%20Dysfunction.jpg)
