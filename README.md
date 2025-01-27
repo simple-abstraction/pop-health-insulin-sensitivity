@@ -60,20 +60,20 @@ With the data ready for analysis, the following questions are under consideratio
 
 ### **Exploring and reviewing the distribution of data across the population**
 ### Figure 1.1: Population Distribution of Diabetes
-![Figure 1.1: Population Distribution of Diabetes](./analysis/Figure%201.1%20Population%20Distribution%20of%20Diabetes.jpg)
+![Figure 1.1: Population Distribution of Diabetes](./charts/Figure%201.1%20Population%20Distribution%20of%20Diabetes.jpg)
 - Approximately 70% of the population have a normal blood sugar level, 20% have slightly elevated blood sugar (Prediabetes), and 9% have significantly elevated blood sugar (Diabetes).
 
 ### Figure 1.2: Population Distribution of Insulin Resistance
-![Figure 1.2: Population Distribution of Insulin Resistance](./analysis/Figure%201.2%20Population%20Distribution%20of%20Insulin%20Resistance.jpg)
+![Figure 1.2: Population Distribution of Insulin Resistance](./charts/Figure%201.2%20Population%20Distribution%20of%20Insulin%20Resistance.jpg)
 - Approximately 41% of the population experiences normal insulin sensitivity, 20% is experiencing early insulin resistance, and 39% have significant insulin resistance.
 
 ### Figure 1.3: Population Distribution by Age Group
-![Figure 1.3: Population Distribution by Age Group](./analysis/Figure%201.3%20Population%20Distribution%20by%20Age%20Group.jpg)
+![Figure 1.3: Population Distribution by Age Group](./charts/Figure%201.3%20Population%20Distribution%20by%20Age%20Group.jpg)
 - The population is distributed across age groups as expected, and likely aligns closely with changing demographics over time.
 - The data is limited to the ages 12-80 because age 12 is the minimum age set by NHANES to participate in lab work, and NHANES denotes everyone over age 80 as just 80.
 
 ### Figure 1.4: Population Distribution by BMI
-![Figure 1.4: Population Distribution by BMI](./analysis/Figure%201.4%20Population%20Distribution%20by%20BMI.jpg)
+![Figure 1.4: Population Distribution by BMI](./charts/Figure%201.4%20Population%20Distribution%20by%20BMI.jpg)
 - Approximately 30% of the population is a normal weight, 29.5% are overweight, and 38% experience some degree of obesity. Less than 3% are underweight.
 
 ### **Evalulating beta cell health and dysfunction**
@@ -88,17 +88,17 @@ We can evaluate the health and dysfunction of beta cells by looking at the follo
 Figure 2.1 will evaluate the entire population without respect to Age or BMI. Given that Age and BMI are both significant risk factors for Type 2 Diabetes, Figures 2.2-2.4 will evaluate health and dysfunction by Age Group, and Figures 2.5-2.7 will evaluate by BMI instead of Age Group.
 
 ### Figure 2.1: Population Distribution of Beta Cell Health and Dysfunction
-![Figure 2.1: Population Distribution of Beta Cell Health and Dysfunction](./analysis/Figure%202.1%20Population%20Distribution%20of%20Factors%20in%20Beta%20Cell%20Health%20and%20Dysfunction.jpg)
+![Figure 2.1: Population Distribution of Beta Cell Health and Dysfunction](./charts/Figure%202.1%20Population%20Distribution%20of%20Factors%20in%20Beta%20Cell%20Health%20and%20Dysfunction.jpg)
 - Approximately 35% of the population is in a healthy state, another 35% are experiencing insulin resistance without elevated blood sugar, 24% are experiencing both elevated insulin and blood sugar, and 6.5% are experiencing elevated A1C only.
     - In other words, while just over a third of the population has a healthy blood sugar and insulin response, just as many are experiencing early insulin resistance, and the remaining 30% experiencing some form of elevated blood sugar and beta cell dysfunction.
 
 ### Figure 2.2 Population Distribution of Beta Cell Health and Dysfunction by Age Group
-![Figure 2.2 Population Distribution of Beta Cell Health and Dysfunction by Age Group](./analysis/Figure%202.2%20Population%20Distribution%20of%20Factors%20in%20Beta%20Cell%20Health%20and%20Dysfunction%20by%20Age%20Group.jpg)
+![Figure 2.2 Population Distribution of Beta Cell Health and Dysfunction by Age Group](./charts/Figure%202.2%20Population%20Distribution%20of%20Factors%20in%20Beta%20Cell%20Health%20and%20Dysfunction%20by%20Age%20Group.jpg)
 - This chart not only shows how diabetes and insulin resistance change as age increases, but it also shows which category is the most predominant for a given age group. Each data point represents a percentage of the total US population.
 - In order to further evaluate our data effectively, we will want to "normalize" population across our age groups to understand proportionate likelihood of health or dysfunction within a given age group, rather than being subjected to skew where population is higher or lower for an age group (e.g. since population decreases in older age, all factors within that age group look relatively smaller compared to more populous age groups, which makes it harder to spot the overall trends).
 
 ### Figure 2.3: Likelihood of Beta Cell Health and Dysfunction by Age Group
-![Figure 2.3: Likelihood of Beta Cell Health and Dysfunction by Age Group](./analysis/Figure%202.3%20Likelihood%20of%20Factors%20in%20Beta%20Cell%20Health%20and%20Dysfunction%20by%20Age%20Group.jpg)
+![Figure 2.3: Likelihood of Beta Cell Health and Dysfunction by Age Group](./charts/Figure%202.3%20Likelihood%20of%20Factors%20in%20Beta%20Cell%20Health%20and%20Dysfunction%20by%20Age%20Group.jpg)
 - In contrast with the previous chart, this one shows the likelihood of status within a given age group, rather than the percent of total population. In other words, it is not skewed when certain age groups have higher or lower populations, which allows us to see the overall trend as age increases.
 1. The predominant states for those up to around age 30 are a *healthy response* and *insulin resistance only*.
 2. It is very uncommon to experience *elevated blood sugar only* at an early age, but one potential explanation or factor could be Type 1 Diabetes, which is present from birth, where the body does not produce insulin at all, thus causing a naturally elevated blood sugar that requires supplemental insulin.
@@ -107,7 +107,7 @@ Figure 2.1 will evaluate the entire population without respect to Age or BMI. Gi
 5. In the very beginning of life (at least, from our 12 year old minimum), there is already a significant degree of insulin resistance. This is curious, and it may be related to significant increases in childhood obesity in recent years and decades, indicating that people are experiencing earlier onset and/or faster disease progression, likely due to societal factors. Since our data was captured within a short two-year period, we would need to look back at historical data to understand and confirm existence of periods with significant worsening of public health.
 
 ### Figure 2.4: Likelihood of Overall Health or Dysfunction by Age Group
-![Figure 2.4: Likelihood of Overall Health or Dysfunction by Age Group](./analysis/Figure%202.4%20Likelihood%20of%20Overall%20Beta%20Cell%20Health%20or%20Dysfunction%20by%20Age%20Group.jpg)
+![Figure 2.4: Likelihood of Overall Health or Dysfunction by Age Group](./charts/Figure%202.4%20Likelihood%20of%20Overall%20Beta%20Cell%20Health%20or%20Dysfunction%20by%20Age%20Group.jpg)
 - This chart is similar to the previous, but it is simpler - it only shows those who are healthy (*normal blood sugar and insulin sensitivity*) compared to those who have any form or degree of beta cell dysfunction (*any combination of elevated blood sugar OR insulin*). Many of the previous insights around health with respect to age are also visible here. 
 - Aside from the alarming spike in the 12-20 age group, the prevalence of dysfunction increases slowly and consistently with age, with a notably sharp increase around age 50.
     - There may be research and historical data that can align the sharp increases we see here with sigificant changes that happened at these respective periods in time (in particular, after the year 1970, and then after 2000). 
@@ -115,20 +115,20 @@ Figure 2.1 will evaluate the entire population without respect to Age or BMI. Gi
 - Although we can see a much greater divergence in older age (particularly around 50 years old and after), there is a large divergence in the youngest age group. This is an anomaly and seems more likely to represent worsening childhood obesity than typical disease progression. In fact, it could indicate that the prevalence and progression of Type 2 Diabetes will increase in younger generations without an intervention in public health to improve outcomes.
 
 ### Figure 2.5: Population Distribution of Beta Cell Health and Dysfunction by BMI
-![Figure 2.5: Population Distribution of Beta Cell Health and Dysfunction by BMI](./analysis/Figure%202.5%20Population%20Distribution%20of%20Factors%20in%20Beta%20Cell%20Health%20and%20Dysfunction%20by%20BMI.jpg)
+![Figure 2.5: Population Distribution of Beta Cell Health and Dysfunction by BMI](./charts/Figure%202.5%20Population%20Distribution%20of%20Factors%20in%20Beta%20Cell%20Health%20and%20Dysfunction%20by%20BMI.jpg)
 - This chart shows how diabetes and insulin resistance change over time as BMI increases. In contrast with the previous chart, this does not factor in age group. Each data point represents a percentage of the total US population.
 - Similar to how we analyzed our data by age group, we will also want to "normalize" our population to understand proportionate likelihood for health or dysfunction for a person at a given BMI.
 - Most notably, this chart indicates that approximately 20% of the US population is both a normal weight and has healthy beta cell function. This is clearly the largest group in the chart, but if we were to group higher BMIs together, we would see a much larger percentage of the population at an unhealthy weight and experiencing dysfunction.
     - Given valid critiques of the BMI system, it may not be appropriate to say that "only 20% of the population is healthy (through this lens)", but it is still a valuable insight that confirms that a significant degree of the population is outside of this optimal bubble of healthiness. 
 
 ### Figure 2.6: Likelihood of Beta Cell Health and Dysfunction by BMI
-![Figure 2.6: Likelihood of Beta Cell Health and Dysfunction by BMI](./analysis/Figure%202.6%20Likelihood%20of%20Factors%20in%20Beta%20Cell%20Health%20and%20Dysfunction%20by%20BMI.jpg)
+![Figure 2.6: Likelihood of Beta Cell Health and Dysfunction by BMI](./charts/Figure%202.6%20Likelihood%20of%20Factors%20in%20Beta%20Cell%20Health%20and%20Dysfunction%20by%20BMI.jpg)
 - After normalizing population to only see likelihood of health or dysfunction for a given BMI threshold, we can see a clear relationship between weight and beta cell function. As weight increases, it becomes steadily more likely to experience progression towards Type 2 Diabetes.
 - It is worth noting that, even at a "normal" or "healthy" weight, there is still a non-insignificant degree of insulin-resistance, which may indicate that beta cell dysfunction or diabetes will still progress or develop with age. 
 - The incidence of *elevated blood sugar only (with normal sensitivity)* being highest at low and normal weights may be another indication of Type 1 Diabetes. At higher weights, it may indicate treatment of Type 2 Diabetes with medication that increases insulin sensitivity. 
 
 ### Figure 2.7: Likelihood of Overall Health and Dysfunction by BMI
-![Figure 2.7: Likelihood of Overall Health and Dysfunction by BMI](./analysis/Figure%202.7%20Likelihood%20of%20Overall%20Beta%20Cell%20Health%20and%20Dysfunction%20by%20BMI.jpg)
+![Figure 2.7: Likelihood of Overall Health and Dysfunction by BMI](./charts/Figure%202.7%20Likelihood%20of%20Overall%20Beta%20Cell%20Health%20and%20Dysfunction%20by%20BMI.jpg)
 - This final chart confirms the inverse relationship between weight and beta cell function, with the inversion between health and dysfunction at approximately the transition from normal weight to overweight. 
 
 
