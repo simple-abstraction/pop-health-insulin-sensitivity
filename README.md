@@ -131,7 +131,9 @@ Figure 2.1 will evaluate the entire population without respect to Age or BMI. Gi
 ![Figure 2.7: Likelihood of Overall Health and Dysfunction by BMI](./analysis/Figure%202.7%20Likelihood%20of%20Overall%20Beta%20Cell%20Health%20and%20Dysfunction%20by%20BMI.jpg)
 - This final chart confirms the inverse relationship between weight and beta cell function, with the inversion between health and dysfunction at approximately the transition from normal weight to overweight. 
 
+
 #### This analysis provides an extremely insightful view of diabetes and its factors across the US population.
+[The queries behind these visualizations are available for review here.](./queries/queries.sql)
 
 ## Conclusion 
 
