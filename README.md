@@ -19,7 +19,7 @@ The secondary goals:
 
 
 ## An Overview of Diabetes
-Type 2 Diabetes is a chronic disease that impacts how the body processes sugar, characterized by a decreasingly effective insulin response over time. Insulin is produced by beta-cells in the pancreas in order to regulate blood sugar. As a person's insulin becomes less effective at regulating blood sugar, the body has to produce progressively more insulin to keep blood sugar within a normal range. Eventually, as the disease develops and progresses, the beta-cells in the pancreas begin to fail, where either they cannot produce enough insulin or the insulin is simply ineffective, and blood sugar will then begin to rise. In advanced stages of the disease, after insulin has stopped being produced, insulin deficiency will occur, requiring injections to maintain blood sugar. As the disease progresses, it becomes much harder to reverse the damage, so early detection and a lifestyle changes (in particular, diet and physical activity) are often essential for improvement. [[1]](https://diabetes.org/living-with-diabetes/type-2/how-type-2-diabetes-progresses)
+Type 2 Diabetes is a chronic disease that impacts how the body processes sugar, characterized by a decreasingly effective insulin response over time. Insulin is produced by beta cells in the pancreas in order to regulate blood sugar. As a person's insulin becomes less effective at regulating blood sugar, the body has to produce progressively more insulin to keep blood sugar within a normal range. Eventually, as the disease develops and progresses, the beta cells in the pancreas begin to fail, where either they cannot produce enough insulin or the insulin is simply ineffective, and blood sugar will then begin to rise. In advanced stages of the disease, after insulin has stopped being produced, insulin deficiency will occur, requiring injections to maintain blood sugar. As the disease progresses, it becomes much harder to reverse the damage, so early detection and a lifestyle changes (in particular, diet and physical activity) are often essential for improvement. [[1]](https://diabetes.org/living-with-diabetes/type-2/how-type-2-diabetes-progresses)
 
 The disease impacts a significant portion of the US (and global) population, and has continued to rise over time [[2]](https://archive.cdc.gov/www_cdc_gov/diabetes/library/reports/reportcard/national-state-diabetes-trends.html?). It is associated with a variety of health challenges; from obesity and deterioration of health and wellness at the individual level, to population level impacts such as loss of productivity [[3]](https://diabetesjournals.org/care/article/45/11/2553/147546/Productivity-Loss-and-Medical-Costs-Associated?) and significant healthcare costs [[4]](https://diabetes.org/newsroom/press-releases/new-american-diabetes-association-report-finds-annual-costs-diabetes-be) (and given that CMS (Centers for Medicare & Medicaid) is the single largest healthcare payer in the United States [[5]](https://www.cms.gov/cms-guide-medical-technology-companies-and-other-interested-parties/payment), that means the government often absorbs this burden).
 
@@ -53,86 +53,99 @@ After downloading the datasets from the respective components, the following ste
 
 ## Analyzing the Data
 With the data ready for analysis, the following questions are under consideration:
-1. How are each of our four core data fields (Diabetes, Insulin Sensitivity, Age, and BMI) distributed across the population?
-2. What is the relationship between Diabetes and Insulin Resistance across the entire population?
-3. What is the relationship between Diabetes and Insulin Resistance within the context of Age and BMI, two major risk factors for Diabetes?
+1. In order to understand our data, how are each of our four core data fields (Diabetes, Insulin Sensitivity, Age, and BMI) distributed across the population?
+2. What is the relationship between Diabetes and Insulin Resistance (i.e. Beta Cell Health and Dysfunction) across the entire population?
+3. What is the relationship between Diabetes and Insulin Resistance (i.e. Beta Cell Health and Dysfunction within the context of Age and BMI, two major risk factors for Diabetes?
 4. To identify our cohort of the population to target for early intervention with increased insulin testing, what is the subset of the population experiencing Insulin Resistance but does not yet have elevated A1C? 
 
-### **Reviewing the distribution of data across the population**
+### **Exploring and reviewing the distribution of data across the population**
 ### Figure 1.1: Population Distribution of Diabetes
 ![Figure 1.1: Population Distribution of Diabetes](./analysis/Figure%201.1%20Population%20Distribution%20of%20Diabetes.jpg)
 - Approximately 70% of the population have a normal blood sugar level, 20% have slightly elevated blood sugar (Prediabetes), and 9% have significantly elevated blood sugar (Diabetes).
 
-#### Figure 1.2: Population Distribution of Insulin Resistance
+### Figure 1.2: Population Distribution of Insulin Resistance
 ![Figure 1.2: Population Distribution of Insulin Resistance](./analysis/Figure%201.2%20Population%20Distribution%20of%20Insulin%20Resistance.jpg)
 - Approximately 41% of the population experiences normal insulin sensitivity, 20% is experiencing early insulin resistance, and 39% have significant insulin resistance.
 
-#### Figure 1.3: Population Distribution by Age Group
+### Figure 1.3: Population Distribution by Age Group
 ![Figure 1.3: Population Distribution by Age Group](./analysis/Figure%201.3%20Population%20Distribution%20by%20Age%20Group.jpg)
 - The population is distributed across age groups as expected, and likely aligns closely with changing demographics over time.
-- The data is limited to the ages 12-80 because age 12 was the minimum age set by NHANES to participate in lab work, and NHANES denotes everyone over age 80 as just 80.
+- The data is limited to the ages 12-80 because age 12 is the minimum age set by NHANES to participate in lab work, and NHANES denotes everyone over age 80 as just 80.
 
-#### Figure 1.4: Population Distribution by BMI
+### Figure 1.4: Population Distribution by BMI
 ![Figure 1.4: Population Distribution by BMI](./analysis/Figure%201.4%20Population%20Distribution%20by%20BMI.jpg)
 - Approximately 30% of the population is a normal weight, 29.5% are overweight, and 38% experience some degree of obesity. Less than 3% are underweight.
 
-### Evalulating beta-cell health and dysfunction
-Figure 2.1 will evaluate the entire population. Given that Age and BMI are both significant risk factors for Type 2 Diabetes, Figures 2.2-2.4 will evaluate health and dysfunction by Age Group, and Figures 2.5-2.7 will evaluate by BMI instead of Age Group.
+### **Evalulating beta cell health and dysfunction**
+As mentioned in the Overview of Diabetes, beta cells in the pancreas are responsible for producing insulin. When beta cell function begins to fail, the body can no longer keep blood sugar within a normal range.
 
-#### Figure 2.1: Population Distribution of Factors in Beta Cell Health and Dysfunction
-![Figure 2.1: Population Distribution of Factors in Beta Cell Health and Dysfunction](./analysis/Figure%202.1%20Population%20Distribution%20of%20Factors%20in%20Beta%20Cell%20Health%20and%20Dysfunction.jpg)
-- Approximately 35% of the population is in a healthy state, another 35% are experiencing insulin resistance without elevated blood sugar, 24% are experiencing both elevated insulin and blood sugar, and 6.5% are experiencing elevated A1C only. In other words, while just over a third of the population has a healthy blood sugar and insulin response, just as many are experiencing early insulin resistance, and the remaining 30% experiencing some degree of elevated blood sugar and beta-cell dysfunction.
+We can evaluate the health and dysfunction of beta cells by looking at the following combinations of blood sugar (*either normal or elevated, measured by the A1C Blood Glucose test*) and insulin (*normal sensitivity or experiencing resistance, interpreted by the HOMA-IR Insulin Sensitivity calculation*):
+1. Normal blood sugar and normal insulin sensitivity (*healthy beta cell function*)
+2. Normal blood sugar, but experiencing insulin resistance (*developing beta cell dsyfunction*)
+3. Elevated blood sugar and insulin resistance (*beta cells dysfunction and some degree of Type 2 Diabetes*)
+4. Elevated blood sugar, but normal insulin sensitivity (*unlikely, likely indicates some degree of dysfunction and/or treatment*)
 
-### Figure 2.2 Population Distribution of Factors in Beta Cell Health and Dysfunction by Age Group
-![Figure 2.2 Population Distribution of Factors in Beta Cell Health and Dysfunction by Age Group](./analysis/Figure%202.2%20Population%20Distribution%20of%20Factors%20in%20Beta%20Cell%20Health%20and%20Dysfunction%20by%20Age%20Group.jpg)
-- This chart not only shows how diabetes and insulin resistance change as age increases, but it also shows which category is the most predominant for a given age group.
-- In order to further evaluate our data effectively, we will want to "normalize" population across our age groups to understand proportionate likelihood of health or dysfunction within a given age group, rather than being subjected to skew where population is higher or lower for an age group (e.g. since population decreases in older age, all factors within that age group look relatively smaller compared to more populous age groups).
+Figure 2.1 will evaluate the entire population without respect to Age or BMI. Given that Age and BMI are both significant risk factors for Type 2 Diabetes, Figures 2.2-2.4 will evaluate health and dysfunction by Age Group, and Figures 2.5-2.7 will evaluate by BMI instead of Age Group.
 
-### Figure 2.3: Likelihood of Factors in Beta Cell Health and Dysfunction by Age Group
-![Figure 2.3: Likelihood of Factors in Beta Cell Health and Dysfunction by Age Group](./analysis/Figure%202.3%20Likelihood%20of%20Factors%20in%20Beta%20Cell%20Health%20and%20Dysfunction%20by%20Age%20Group.jpg)
-- In contrast with the previous chart, this one shows the likelihood of status within a given age group, rather than the percent of total population. In other words, it is not skewed when certain age groups have higher or lower populations.
-- The predominant states for those up to around age 30 are a *healthy response* and *insulin resistance only*. It is very uncommon to experience *elevated blood sugar only* at an early age, but one potential factor could be Type 1 Diabetes, which is present from birth, where the body does not produce insulin at all, thus causing a naturally elevated blood sugar that requires supplemental insulin.
-- In general, it appears that those in the population between ages 20-40 are most likely to experience healthiness (*neither elevated blood sugar nor insulin resistance*) as well as *insulin resistance only*. The prevalence of both experience a slow decline in favor of the other two states, with untreated Diabetes (*elevated blood sugar and insulin resistance together*) in particular increasing in prevalence. For those around age 50, *elevated blood sugar and insulin* becomes the most prominent category and remains in the top spot for all subsequent age groups.
-- For those around 80 years old, there is a sharp increase in the number of folks who experience *elevated blood sugar only, and not insulin resistance*, and aligns with a small decline in the incidence of people with *both elevated blood sugar and insulin resistance*). Although it is the state with the smallest incidence by far, the sharp spike upwards at the end of life to no longer be the least common category, may support the idea that medications like Metformin which increase insulin sensitivity but don't necessarily increase blood sugar are taken at higher rates, as well as that people who are treating their Diabetes are more likely to live longer. 
-- In the very beginning of life (at least, from our 12 year old minimum), there is already a significant degree of insulin resistance. This is curious, and it may be related to significant increases in childhood obesity in recent years and decades, indicating that people are experiencing earlier onset and/or faster disease progression, likely due to societal factors. Since our data was captured within a brief moment of time (in the grand scheme of things), it cannot give us the answer - we would need to look back at historical data to understand.
+### Figure 2.1: Population Distribution of Beta Cell Health and Dysfunction
+![Figure 2.1: Population Distribution of Beta Cell Health and Dysfunction](./analysis/Figure%202.1%20Population%20Distribution%20of%20Factors%20in%20Beta%20Cell%20Health%20and%20Dysfunction.jpg)
+- Approximately 35% of the population is in a healthy state, another 35% are experiencing insulin resistance without elevated blood sugar, 24% are experiencing both elevated insulin and blood sugar, and 6.5% are experiencing elevated A1C only.
+    - In other words, while just over a third of the population has a healthy blood sugar and insulin response, just as many are experiencing early insulin resistance, and the remaining 30% experiencing some form of elevated blood sugar and beta cell dysfunction.
 
-### Figure 2.4: Likelihood of Overall Beta-Cell Health or Dysfunction by Age Group
-![Figure 2.4: Likelihood of Overall Beta-Cell Health or Dysfunction by Age Group](./analysis/Figure%202.4%20Likelihood%20of%20Overall%20Beta-Cell%20Health%20or%20Dysfunction%20by%20Age%20Group.jpg)
-- This chart is similar to the previous, but it is simpler - it only shows those who are healthy (*normal blood sugar and insulin sensitivity*) compared to those who have some form and degree of beta-cell dysfunction (*any combination of elevated blood sugar OR insulin*). The previous insights and hypotheses are also visible here. 
-- Aside from the alarming spike in the 12-20 age group, the prevalence of dysfunction increases slowly and consistently with age, with a notably sharp increase around age 50. There is likely research using historical data that can align the sharp increases we see here with sigificant changes that happened at these respective periods in time (in particular, after the years 1970 and then 2000). 
-- With all forms of dysfunction grouped together, it is clear that beta-cell dysfunction as a whole remains the most likely state for all age groups.
+### Figure 2.2 Population Distribution of Beta Cell Health and Dysfunction by Age Group
+![Figure 2.2 Population Distribution of Beta Cell Health and Dysfunction by Age Group](./analysis/Figure%202.2%20Population%20Distribution%20of%20Factors%20in%20Beta%20Cell%20Health%20and%20Dysfunction%20by%20Age%20Group.jpg)
+- This chart not only shows how diabetes and insulin resistance change as age increases, but it also shows which category is the most predominant for a given age group. Each data point represents a percentage of the total US population.
+- In order to further evaluate our data effectively, we will want to "normalize" population across our age groups to understand proportionate likelihood of health or dysfunction within a given age group, rather than being subjected to skew where population is higher or lower for an age group (e.g. since population decreases in older age, all factors within that age group look relatively smaller compared to more populous age groups, which makes it harder to spot the overall trends).
 
-### Figure 2.5: Population Distribution of Factors in Beta Cell Health and Dysfunction by BMI
-![Figure 2.5: Population Distribution of Factors in Beta Cell Health and Dysfunction by BMI](./analysis/Figure%202.5%20Population%20Distribution%20of%20Factors%20in%20Beta%20Cell%20Health%20and%20Dysfunction%20by%20BMI.jpg)
-- This chart shows how diabetes and insulin resistance change over time as BMI increases. In contrast with the previous chart, this does not factor in age group.
-- Similar to age, we will want to view this data with a normalized population to understand proportionate likelihood for health or dysfunction for a given BMI.
-- Most notably, this chart indicates that approximately 20% of the US population is both a normal weight and has healthy beta-cell function. Given the valid critiques of the BMI system, it may not be appropriate to say that "only 20% of the population is healthy", but it is still a valuable insight that confirms that a significant degree of the population is already being impacted by some form of beta-cell dysfunction. 
+### Figure 2.3: Likelihood of Beta Cell Health and Dysfunction by Age Group
+![Figure 2.3: Likelihood of Beta Cell Health and Dysfunction by Age Group](./analysis/Figure%202.3%20Likelihood%20of%20Factors%20in%20Beta%20Cell%20Health%20and%20Dysfunction%20by%20Age%20Group.jpg)
+- In contrast with the previous chart, this one shows the likelihood of status within a given age group, rather than the percent of total population. In other words, it is not skewed when certain age groups have higher or lower populations, which allows us to see the overall trend as age increases.
+1. The predominant states for those up to around age 30 are a *healthy response* and *insulin resistance only*.
+2. It is very uncommon to experience *elevated blood sugar only* at an early age, but one potential explanation or factor could be Type 1 Diabetes, which is present from birth, where the body does not produce insulin at all, thus causing a naturally elevated blood sugar that requires supplemental insulin.
+3. In general, it appears that those in the population between ages 20-40 are most likely to experience healthiness (*neither elevated blood sugar nor insulin resistance*) as well as *insulin resistance only*. The prevalence of both decline slowly in favor of the other two states, with untreated Diabetes (*elevated blood sugar and insulin resistance together*) in particular increasing in prevalence, which represents progression towards Type 2 Diabetes. For those around age 50, Type 2 Diabetes (*elevated blood sugar and insulin*) becomes the most prominent category and remains in the top spot for all subsequent older age groups.
+4. For those around 80 years old, there is a sharp increase in the number of folks who experience *elevated blood sugar only, and not insulin resistance*, and aligns with a small decline in the incidence of people with *both elevated blood sugar and insulin resistance*). Although it is the state with the smallest incidence by far, the sharp spike upwards to no longer be the least common category, may support the idea that medications like Metformin (which increase insulin sensitivity but don't necessarily decrease blood sugar unless taken regularly alongside significant lifestyle changes for an extended period of time) are taken at higher rates, as well as that people who are treating their condition (or are simply healthy) are more likely to live longer (thus they represent a larger percentage of the age group). 
+5. In the very beginning of life (at least, from our 12 year old minimum), there is already a significant degree of insulin resistance. This is curious, and it may be related to significant increases in childhood obesity in recent years and decades, indicating that people are experiencing earlier onset and/or faster disease progression, likely due to societal factors. Since our data was captured within a short two-year period, we would need to look back at historical data to understand and confirm existence of periods with significant worsening of public health.
 
-### Figure 2.6: Likelihood of Factors in Beta Cell Health and Dysfunction by BMI
-![Figure 2.6: Likelihood of Factors in Beta Cell Health and Dysfunction by BMI](./analysis/Figure%202.6%20Likelihood%20of%20Factors%20in%20Beta%20Cell%20Health%20and%20Dysfunction%20by%20BMI.jpg)
-- After normalizing population to only see likelihood of a state for a given BMI threshold, we can see a clear relationship between weight and beta-cell function. As weight increases, it becomes steadily more likely to experience *elevated blood sugar* or *elevated blood sugar and insulin resistance*.  
-- It is worth noting that, even at a "normal" or "healthy" weight, there is still a non-insignificant degree of insulin-resistance, which may indicate that diabetes can still develop with age. 
-- The incidence of *elevated blood sugar only* being highest at low and normal weights may be another indication of Type 1 Diabetes. At higher weights, it may indicate treatment of Type 2 Diabetes with medication that increases insulin-sensitivity. 
+### Figure 2.4: Likelihood of Overall Health or Dysfunction by Age Group
+![Figure 2.4: Likelihood of Overall Health or Dysfunction by Age Group](./analysis/Figure%202.4%20Likelihood%20of%20Overall%20Beta%20Cell%20Health%20or%20Dysfunction%20by%20Age%20Group.jpg)
+- This chart is similar to the previous, but it is simpler - it only shows those who are healthy (*normal blood sugar and insulin sensitivity*) compared to those who have any form or degree of beta cell dysfunction (*any combination of elevated blood sugar OR insulin*). Many of the previous insights around health with respect to age are also visible here. 
+- Aside from the alarming spike in the 12-20 age group, the prevalence of dysfunction increases slowly and consistently with age, with a notably sharp increase around age 50.
+    - There may be research and historical data that can align the sharp increases we see here with sigificant changes that happened at these respective periods in time (in particular, after the year 1970, and then after 2000). 
+- With all forms of dysfunction grouped together, we can see that every age group is more likely to experience some form of beta cell dysfunction than healthiness. 
+- Although we can see a much greater divergence in older age (particularly around 50 years old and after), there is a large divergence in the youngest age group. This is an anomaly and seems more likely to represent worsening childhood obesity than typical disease progression. In fact, it could indicate that the prevalence and progression of Type 2 Diabetes will increase in younger generations without an intervention in public health to improve outcomes.
 
-### Figure 2.7: Likelihood of Overall Beta Cell Health and Dysfunction by BMI
-![Figure 2.7: Likelihood of Overall Beta Cell Health and Dysfunction by BMI](./analysis/Figure%202.7%20Likelihood%20of%20Overall%20Beta%20Cell%20Health%20and%20Dysfunction%20by%20BMI.jpg)
-- This final chart confirms the inverse relationship between weight and beta-cell function, with the inversion between health and dysfunction at approximately the transition from normal weight to overweight. 
+### Figure 2.5: Population Distribution of Beta Cell Health and Dysfunction by BMI
+![Figure 2.5: Population Distribution of Beta Cell Health and Dysfunction by BMI](./analysis/Figure%202.5%20Population%20Distribution%20of%20Factors%20in%20Beta%20Cell%20Health%20and%20Dysfunction%20by%20BMI.jpg)
+- This chart shows how diabetes and insulin resistance change over time as BMI increases. In contrast with the previous chart, this does not factor in age group. Each data point represents a percentage of the total US population.
+- Similar to how we analyzed our data by age group, we will also want to "normalize" our population to understand proportionate likelihood for health or dysfunction for a person at a given BMI.
+- Most notably, this chart indicates that approximately 20% of the US population is both a normal weight and has healthy beta cell function. This is clearly the largest group in the chart, but if we were to group higher BMIs together, we would see a much larger percentage of the population at an unhealthy weight and experiencing dysfunction.
+    - Given valid critiques of the BMI system, it may not be appropriate to say that "only 20% of the population is healthy (through this lens)", but it is still a valuable insight that confirms that a significant degree of the population is outside of this optimal bubble of healthiness. 
+
+### Figure 2.6: Likelihood of Beta Cell Health and Dysfunction by BMI
+![Figure 2.6: Likelihood of Beta Cell Health and Dysfunction by BMI](./analysis/Figure%202.6%20Likelihood%20of%20Factors%20in%20Beta%20Cell%20Health%20and%20Dysfunction%20by%20BMI.jpg)
+- After normalizing population to only see likelihood of health or dysfunction for a given BMI threshold, we can see a clear relationship between weight and beta cell function. As weight increases, it becomes steadily more likely to experience progression towards Type 2 Diabetes.
+- It is worth noting that, even at a "normal" or "healthy" weight, there is still a non-insignificant degree of insulin-resistance, which may indicate that beta cell dysfunction or diabetes will still progress or develop with age. 
+- The incidence of *elevated blood sugar only (with normal sensitivity)* being highest at low and normal weights may be another indication of Type 1 Diabetes. At higher weights, it may indicate treatment of Type 2 Diabetes with medication that increases insulin sensitivity. 
+
+### Figure 2.7: Likelihood of Overall Health and Dysfunction by BMI
+![Figure 2.7: Likelihood of Overall Health and Dysfunction by BMI](./analysis/Figure%202.7%20Likelihood%20of%20Overall%20Beta%20Cell%20Health%20and%20Dysfunction%20by%20BMI.jpg)
+- This final chart confirms the inverse relationship between weight and beta cell function, with the inversion between health and dysfunction at approximately the transition from normal weight to overweight. 
 
 #### This analysis provides an extremely insightful view of diabetes and its factors across the US population.
 
 ## Conclusion 
 
 In Summary:
-- We can confirm that insulin resistance does indeed precede the onset of diabetes by a measurable degree, with about 35% of the population experiencing insulin resistance but not yet having elevated blood sugar, often from a young age. If these folks were given an A1C blood sugar test, they would test in the normal range. This is a significant amount of the US population that could benefit from knowing that they are on the path to developing diabetes.
-- This analysis fully succeeds at demonstrating the scale and depth of the public health problem, but unfortunately it may not be able to be fixed by increased lab testing alone. It likely requires a massive societal shift to address the many contributing factors involved that encourage the development of diabetes and obesity, which is an infinitely more complex public health problem to address, and would take time for change to materialize. On the contrary, there are many indications that the problem is getting worse.
-- Despite public health challenges, insulin sensitivity testing could still be a valuable tool for a healthcare practitioner or a health-conscious person who is at-risk to get an early start on the lifestyle changes they may need to implement. Although is not clear how many actually make quantifiable lifestyle changes after recieving a diagnosis, the earlier we can tell any individual in the 35% of the population experiencing covert insulin resistance that they're at-risk the better.
+- We can confirm that insulin resistance does indeed precede the onset of diabetes by a measurable degree, with about 35% of the population experiencing insulin resistance but not yet having elevated blood sugar, including from (and becoming more common for) younger age groups. If these folks were given an A1C blood glucose test, they would test in the normal range. This is a significant portion of the US population that could benefit from knowing that they are on the path to developing Type 2 Diabetes.
+- This analysis fully succeeds at demonstrating the scale and depth of the public health problem, but unfortunately it may not be able to be fixed by increased lab testing alone. It likely requires a massive societal shift to address the many contributing factors involved that encourage the development of diabetes and obesity, which is an infinitely more complex public health problem to address, and would take much time for change to materialize. On the contrary, the sharp increase in insulin resistance in younger age groups (which aligns with increases in childhood obesity) indicates that the problem is continuing to get worse.
+- Despite public health challenges, insulin sensitivity testing could still be a valuable tool for a healthcare practitioner or a health-conscious person who is at-risk to get an early start on the lifestyle changes they may need to implement, and to set a clinical baseline for improvement. Although is not clear how many actually make quantifiable lifestyle changes after recieving a diagnosis, the earlier we can tell any individual in the 35% of the population experiencing covert insulin resistance that they're at-risk, the greater the impact than can be made.
 
-A few obstacles to improving public health include:
+In closing, a few of the obstacles to improving public health (and potential areas to explore with further analysis) include:
 - Educating the medical community that insulin sensitivity precedes diabetes and that it can be tested
-- Encouraging insurers to actually cover the fasting glucose and insulin tests instead of just the A1C test, which is often a barrier
-- Educating the general public on Type 2 Diabetes in a way that contextualizes the severity of present unhealthy behaviors as major contributors to a decline in health with age 
-- The rise in sedentary lifestyle caused by things such as an increase in desk-jobs and highly accessible entertainment which contribute to inactivity
-- The affordability, accessibility, and prevalence of high-carb diets (which have agricultural and economic implications, given that heavily subsidized crops like corn and grain are in many of our foods, whose increasing presence in our foods may align with sharp increases in obesity rates, and may explain why we see such high insulin resistance even from a young age, suggesting that many people are not suited for high-carb diets and end up unknowingly facing the consequences).
+- Encouraging insurers to actually cover the fasting glucose and insulin tests instead of just the A1C blood glucose test, which is often a barrier for early diagnosis and treatment
+- Educating the general public on Type 2 Diabetes in a way that contextualizes the public health problem as something that is likely already impacting them and will get worse with age
+- The rise in sedentary lifestyle caused by things such as an increase in desk-jobs and highly accessible entertainment which contribute to inactivity 
+- The growing affordability, accessibility, and prevalence of high-sugar and high-carb diets (which have agricultural and economic implications, given that heavily subsidized crops like corn and grain, whose increasing presence in our foods and diets may align with sharp increases in generational obesity rates, and may explain why we see such high insulin resistance even from a young age, suggesting that many people are not suited for high-sugar/high-carb diets and end up unknowingly facing the consequences for following unhealthy societal standards of dietary consumption).
 
 
 ## Various Resources  
