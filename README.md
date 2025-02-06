@@ -1,11 +1,11 @@
 # Measuring Insulin Sensitivity to Predict Type 2 Diabetes
-The standard method for diagnosing and measuring Type 2 Diabetes is primarily based on the popular Hemoglobin A1C test, which measures average blood glucose (or blood sugar) over the past 2-3 months. However, this method alone can result in missing the long window of early detection for the disease by up to decades, as blood glucose will typically only rise once a person is already resistant to their insulin response, which happens progressively over time as beta cells in the pancreas begin to experience dysfunction, and only results in an elevated A1C test once their body's ability to keep blood sugar within a normal range has already become compromised. 
+The standard method for diagnosing and measuring Type 2 Diabetes is primarily based on the popular Hemoglobin A1C test, which measures average blood glucose (blood sugar) over approximately the past 3 months. However, this method alone can result in missing the long window of early detection for the disease by up to decades, as blood glucose will typically only rise once a person is already resistant to their insulin response, which happens progressively over time as beta cells in the pancreas begin to experience dysfunction, and only results in an elevated A1C test once their body's ability to keep blood sugar within a normal range has already become compromised. 
 
 Despite growing awareness of diabetes risk factors such as obesity, aging, and a sedentary lifestyle, routine screenings essentially never include direct assessment of beta cell function or insulin resistance. This gap in early detection means that a significant portion of the population may be unaware that they are already on the path to developing diabetes. Given that the current diagnostic criteria focuses solely on blood glucose levels, early beta cell dysfunction often goes unrecognized, delaying intervention until the disease has already fully developed - at which point the disease becomes significantly harder to reverse.
 
-This analysis leverages publicly available NHANES data from the CDC to investigate insulin resistance at a population level. The findings below ultimately suggest that a substantial proportion of individuals, roughly 35% of the entire US population, exhibits what could be called "covert insulin resistance" - a state in which beta cell function has begun to decline, yet blood glucose remains within normal limits. 
+This analysis leverages publicly available NHANES data from the CDC to investigate insulin resistance at a population level. The findings below ultimately suggest that a substantial proportion of individuals, roughly 35% of the entire US population, exhibits what could be called "covert insulin resistance" - a state in which beta cell function has begun to decline, yet blood glucose remains within normal levels. 
 
-By identifying patterns in insulin resistance before overt hyperglycemia (elevated blood sugar) develops, this study highlights the need for a more proactive approach to metabolic health. A shift in screening strategies could allow for earlier interventions that preserve beta cell function and potentially prevent the onset of type 2 diabetes altogether.
+By identifying patterns in insulin resistance before overt hyperglycemia (elevated blood sugar) develops, this study highlights the need for a more proactive approach to metabolic health. A shift in screening strategies could allow for earlier interventions that preserve beta cell function and potentially prevent the onset of Type 2 Diabetes altogether.
  
 
 ## Objectives and Goals 
@@ -16,9 +16,9 @@ By identifying patterns in insulin resistance before overt hyperglycemia (elevat
 ## An Overview of Diabetes
 Type 2 Diabetes is a chronic disease that impacts how the body processes sugar, characterized by a decreasingly effective insulin response over time. Insulin is produced by beta cells in the pancreas in order to regulate blood sugar. As a person's insulin becomes less effective at regulating blood sugar, the body has to produce progressively more insulin to keep blood sugar within a normal range. Eventually, as the disease develops and progresses, the beta cells in the pancreas begin to fail, where either they cannot produce enough insulin or the insulin is simply ineffective, and blood sugar will then begin to rise. In advanced stages of the disease, after insulin has stopped being produced, insulin deficiency will occur, requiring injections to maintain blood sugar. As the disease progresses, it becomes much harder to reverse the damage, so early detection and a lifestyle changes (in particular, diet and physical activity) are often essential for improvement. [[1]](https://diabetes.org/living-with-diabetes/type-2/how-type-2-diabetes-progresses)
 
-The disease impacts a significant portion of the US (and global) population, and has continued to rise over time [[2]](https://archive.cdc.gov/www_cdc_gov/diabetes/library/reports/reportcard/national-state-diabetes-trends.html?). It is associated with a variety of health challenges; from obesity and deterioration of health and wellness at the individual level, to population level impacts such as loss of productivity [[3]](https://diabetesjournals.org/care/article/45/11/2553/147546/Productivity-Loss-and-Medical-Costs-Associated?) and significant healthcare costs [[4]](https://diabetes.org/newsroom/press-releases/new-american-diabetes-association-report-finds-annual-costs-diabetes-be) (and given that CMS (Centers for Medicare & Medicaid) is the single largest healthcare payer in the United States [[5]](https://www.cms.gov/cms-guide-medical-technology-companies-and-other-interested-parties/payment), that means the government often absorbs this burden).
+The disease impacts a significant portion of the US (and global) population, and has continued to rise over time [[2]](https://archive.cdc.gov/www_cdc_gov/diabetes/library/reports/reportcard/national-state-diabetes-trends.html?). It is associated with a variety of health challenges; from obesity and deterioration of health and wellness at the individual level, to population level impacts such as loss of productivity [[3]](https://diabetesjournals.org/care/article/45/11/2553/147546/Productivity-Loss-and-Medical-Costs-Associated?) and significant healthcare costs [[4]](https://diabetes.org/newsroom/press-releases/new-american-diabetes-association-report-finds-annual-costs-diabetes-be) (and given that CMS (Centers for Medicare & Medicaid) is the single largest healthcare payer in the United States [[5]](https://www.cms.gov/cms-guide-medical-technology-companies-and-other-interested-parties/payment), that means the government often absorbs the cost and would also benefit from investing in public health).
 
-In order to diagnose Type 2 Diabetes, the standard Hemoglobin A1C (blood glucose) test is administered. To be precise, the test measures the total percentage of hemoglobin (a protein in red blood cells) that have glucose attached (they bind to the hemoglobin). Since red blood cells have a lifespan of about 90-120 days, the test is considered to be an average of blood glucose over the last 2-3 months. The A1C threshold levels are listed below.
+In order to diagnose Type 2 Diabetes, the standard Hemoglobin A1C (blood glucose) test is administered. To be precise, the test measures the total percentage of hemoglobin (a protein in red blood cells) that have glucose attached (they bind to the hemoglobin). Since red blood cells have a lifespan of roughly 90 days, the test is considered to be an average of blood glucose over the last ~3 months. The A1C threshold levels are listed below.
 
 <!-- ![A1C Thresholds](./charts/A1C%20Thresholds.jpg)   -->
 <img src="./charts/Figure 1.1 A1C Thresholds.jpg" alt="Figure 1.1: A1C Thresholds" width="300"/> 
@@ -32,7 +32,7 @@ In order to measure Insulin Resistance (or Insulin Sensitivity, with regard to h
 
 [A great HOMA-IR calculator is available here.](https://www.omnicalculator.com/health/homa-ir) 
 
-In parts of the analysis, for the sake of simplicity, both of the elevated A1C thresholds can be combined to just "elevated blood sugar" and both of the elevated insulin resistance thresholds can be combined into "insulin resistance". The degree to which they are experiencing dysfunction for either area is not as important as simply the binary nature that they *are* experiencing it to some degree, making it likely that it will continue to develop over time.
+*In parts of the analysis, for the sake of simplicity, both of the elevated A1C thresholds can be combined to just "elevated blood sugar" and both of the elevated insulin resistance thresholds can be combined into "insulin resistance". The degree to which they are experiencing dysfunction for either area is not as important as simply the binary nature that they *are* experiencing it to some degree, making it likely that it will continue to develop over time.*
 
 Although not in the scope of this analysis, Type 1 Diabetes is an autoimmune condition that occurs at birth, where the body does not produce insulin sufficiently or at all, which causes blood sugar to spike after consumption without supplemental insulin to manage the reaction. It is helpful to know this because Type 1 Diabetics also experience beta cell dysfunction and will be represented to some extent in this data, though it impacts a much smaller percentage of the total population.
 
@@ -118,15 +118,13 @@ In order to further evaluate our data effectively, we will want to "normalize" p
 <img src="./charts/Figure 3.1 Likelihood of Beta Cell Health and Dysfunction by Age Group.jpg" alt="Figure 3.1: Likelihood of Beta Cell Health and Dysfunction by Age Group" width="1500"/>
 
 - Across the entire US population, people between ages 20-40 are most likely to experience healthiness (*neither elevated blood sugar nor insulin resistance*) as well as *insulin resistance only*. As age goes up, the prevalence of both states decline slowly in favor of the other two states, with early or developed Type 2 Diabetes (*elevated blood sugar and insulin resistance together*) in particular rising. For those around age 50, Type 2 Diabetes (*elevated blood sugar and insulin*) becomes the most prominent category and remains in the top spot for all subsequent older age groups. 
-- It is very uncommon to experience *elevated blood sugar only* at an early age, but one potential explanation or factor could be Type 1 Diabetes.
 - Around 80 years old (or older), there is a sharp increase in the number of folks who experience *elevated blood sugar only, and not insulin resistance*, and aligns with a small decline in the incidence of people with *both elevated blood sugar and insulin resistance*). Although it is the state with the smallest incidence by far, the sharp spike upwards (to no longer be the least common category), may represent those who are treating their diabetes, as they are more likely to live longer (thus they begin to represent a larger percentage of the age group). 
 - In the youngest age group of 12-20 years old, there is already a significant degree of insulin resistance, which is more likely to be experienced than healthy beta cell function. This may be related to significant increases in childhood obesity in recent years and decades, indicating that children are experiencing earlier onset and/or faster disease progression.
-
 
 ### Figure 3.2: Likelihood of Beta Cell Health and Dysfunction by BMI
 <img src="./charts/Figure 3.2 Likelihood of Beta Cell Health and Dysfunction by BMI.jpg" alt="Figure 3.2: Likelihood of Beta Cell Health and Dysfunction by BMI" width="1500"/>
 
-- After normalization, we can see a clear relationship between weight and beta cell function. As weight increases, it becomes steadily more likely to experience progression towards Type 2 Diabetes.
+- After normalization, we can see a clear relationship between weight and beta cell function. As weight increases, it becomes steadily more likely to experience beta cell dysfunction, or progression towards Type 2 Diabetes.
 - It is worth noting that, even at a "normal" or "healthy" weight, there is still a non-insignificant degree of insulin-resistance, which may indicate that beta cell dysfunction or diabetes will still progress or develop with age. 
 
 
@@ -136,7 +134,6 @@ In order to further evaluate our data effectively, we will want to "normalize" p
 - This chart only shows those who are healthy (*normal blood sugar and insulin sensitivity*) compared to those who have any form or degree of beta cell dysfunction (*any combination of elevated blood sugar OR insulin*).
 - Although we can see a much greater divergence in older age (particularly around 50 years old and after), there is a large divergence in the youngest age group. This is an anomaly and seems more likely to represent worsening childhood obesity than typical disease progression. Without societal change or public health intervention to improve outcomes, this trend may continue.
 - Aside from the alarming spike in the 12-20 age group, the prevalence of dysfunction increases slowly and consistently with age, with a notably sharp increase around age 50.
-    - There may be research or historical data that can align the sharp increases we see here with sigificant changes that happened at these respective periods in time (in particular, after the year 1970, and then after 2000). 
 - With all forms of dysfunction grouped together, we can see that every age group is more likely to experience some form of beta cell dysfunction than healthiness. 
 
 
@@ -168,14 +165,14 @@ In summary:
 - [Demographics Documentation](https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/DEMO_L.htm#RIDAGEYR)
 - [Physical Examination Documentation](https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/BMX_L.htm#BMXBMI)
 
-### Great Information
+### Information on Diabetes
 - [How Type 2 Diabetes Progresses](https://diabetes.org/living-with-diabetes/type-2/how-type-2-diabetes-progresses)
 - [National and State Diabetes Trends](https://archive.cdc.gov/www_cdc_gov/diabetes/library/reports/reportcard/national-state-diabetes-trends.html?)
 - [Diabetes and Loss of Productivity](https://diabetesjournals.org/care/article/45/11/2553/147546/Productivity-Loss-and-Medical-Costs-Associated?)
 - [Diabetes and Healthcare Costs](https://diabetes.org/newsroom/press-releases/new-american-diabetes-association-report-finds-annual-costs-diabetes-be)
 - [Insulin Resistance and Prediabetes (NIH)](https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/prediabetes-insulin-resistance)
 
-### Calculations
+### Lab Calculations
 - [A1C Blood Glucose Thresholds (Diabetes.org)](https://diabetes.org/about-diabetes/a1c)
 - [HOMA-IR Insulin Sensitivity Information & Calculation](https://en.wikipedia.org/wiki/Homeostatic_model_assessment) [(2)](https://www.omnicalculator.com/health/homa-ir#what-is-homa-ir-homa-formula-calculation)
 - [HOMA-IR Insulin Sensitivity Thresholds](https://thebloodcode.com/homa-ir-know/) [(2)](https://drlogy.com/calculator/homa-ir)
