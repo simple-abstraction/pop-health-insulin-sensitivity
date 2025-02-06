@@ -121,20 +121,19 @@ In order to further evaluate our data effectively, we will want to "normalize" p
 - Around 80 years old (or older), there is a sharp increase in the number of folks who experience *elevated blood sugar only, and not insulin resistance*, and aligns with a small decline in the incidence of people with *both elevated blood sugar and insulin resistance*). Although it is the state with the smallest incidence by far, the sharp spike upwards (to no longer be the least common category), may represent those who are treating their diabetes, as they are more likely to live longer (thus they begin to represent a larger percentage of the age group). 
 - In the youngest age group of 12-20 years old, there is already a significant degree of insulin resistance, which is more likely to be experienced than healthy beta cell function. This may be related to significant increases in childhood obesity in recent years and decades, indicating that children are experiencing earlier onset and/or faster disease progression.
 
-### Figure 3.2: Likelihood of Beta Cell Health and Dysfunction by BMI
-<img src="./charts/Figure 3.2 Likelihood of Beta Cell Health and Dysfunction by BMI.jpg" alt="Figure 3.2: Likelihood of Beta Cell Health and Dysfunction by BMI" width="1500"/>
-
-- After normalization, we can see a clear relationship between weight and beta cell function. As weight increases, it becomes steadily more likely to experience beta cell dysfunction, or progression towards Type 2 Diabetes.
-- It is worth noting that, even at a "normal" or "healthy" weight, there is still a non-insignificant degree of insulin-resistance, which may indicate that beta cell dysfunction or diabetes will still progress or develop with age. 
-
-
-### Figure 3.3: Likelihood of Overall Health or Dysfunction by Age Group 
-<img src="./charts/Figure 3.3 Likelihood of Overall Health or Dysfunction by Age Group.jpg" alt="Figure 3.3: Likelihood of Overall Health or Dysfunction by Age Group" width="1500"/>
+### Figure 3.2: Likelihood of Overall Health or Dysfunction by Age Group 
+<img src="./charts/Figure 3.2 Likelihood of Overall Health or Dysfunction by Age Group.jpg" alt="Figure 3.3: Likelihood of Overall Health or Dysfunction by Age Group" width="1500"/>
 
 - This chart only shows those who are healthy (*normal blood sugar and insulin sensitivity*) compared to those who have any form or degree of beta cell dysfunction (*any combination of elevated blood sugar OR insulin*).
 - Although we can see a much greater divergence in older age (particularly around 50 years old and after), there is a large divergence in the youngest age group. This is an anomaly and seems more likely to represent worsening childhood obesity than typical disease progression. Without societal change or public health intervention to improve outcomes, this trend may continue.
-- Aside from the alarming spike in the 12-20 age group, the prevalence of dysfunction increases slowly and consistently with age, with a notably sharp increase around age 50.
+- Aside from the spike in the 12-20 age group, the prevalence of dysfunction increases slowly and consistently with age, with a notably sharp increase around age 50.
 - With all forms of dysfunction grouped together, we can see that every age group is more likely to experience some form of beta cell dysfunction than healthiness. 
+
+### Figure 3.3: Likelihood of Beta Cell Health and Dysfunction by BMI
+<img src="./charts/Figure 3.3 Likelihood of Beta Cell Health and Dysfunction by BMI.jpg" alt="Figure 3.2: Likelihood of Beta Cell Health and Dysfunction by BMI" width="1500"/>
+
+- After normalization, we can see a clear relationship between weight and beta cell function. As weight increases, it becomes steadily more likely to experience beta cell dysfunction, or progression towards Type 2 Diabetes.
+- It is worth noting that, even at a "normal" or "healthy" weight, there is still a non-insignificant degree of insulin-resistance, which may indicate that beta cell dysfunction or diabetes will still progress or develop with age. 
 
 
 ### Figure 3.4: Likelihood of Overall Health and Dysfunction by BMI 
