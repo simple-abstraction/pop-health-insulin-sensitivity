@@ -43,7 +43,7 @@ Here is a flow chart to help visualize how blood sugar and insulin will change g
 ## An Overview of the NHANES Survey
 The NHANES (National Health and Nutrition Examination Survey) is a long-running effort from the CDC to release health data for public use in multi-year cycles. The data is used by government agencies, organizations, and businesses as well as for academic use by instutitions and students. The various surveys administered (broken into "components") are meant to be able to represent the majority of the US population (US citizens, non-institutionalized).
 
-The data is available in "components", which include a number of data fields and a population weight that can be used to show how representative a given survey participant is of the entire US population (which is determined by the statisticians behind the effort to abstract out complex demographic and response factors). By joining data across different components and normalizing the population weight to one's filtered data, one can craft a targeted analyis within the scope of anything that the NHANES survey measures.
+The data is available in "components", which include a number of data fields and a population weight that can be used to show how representative a given survey participant is of the entire US population (which is determined by the survey statisticians to abstract out complex demographic and response factors). By joining data across different components and normalizing the population weight to one's filtered data, one can craft a targeted analysis within the scope of anything that the NHANES survey measures.
 
 For this effort, we will be looking at the following components: [Glycohemoglobin](https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/GHB_L.htm#WTPH2YR) (A1C), [Plasma Fasting Glucose](https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/GLU_L.htm) and [Insulin](https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/INS_L.htm) (both needed to calculate Insulin Sensitivity), [Demographics](https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/DEMO_L.htm#RIDAGEYR) (specifically for Age), and [Examination](https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/BMX_L.htm#BMXBMI) (specifically for BMI). 
 
@@ -68,10 +68,12 @@ After downloading the datasets from the respective components, the following ste
 
 ## Analysis
 With the data ready for analysis, we are evaluating the following questions:
-1. How are each of our four core data fields Diabetes (A1C threshold), Insulin Sensitivity (HOMA-IR thresold), Age Group (decade), and BMI (CDC threshold) distributed across the population? This will help us understand the data
-2. What is the subset of the population experiencing Insulin Resistance but does not yet have elevated A1C? This is our subset of the population that would benefit from early insulin testing
+1. How are each of our four core data fields Diabetes (A1C threshold), Insulin Sensitivity (HOMA-IR thresold), Age Group (decade), and BMI (CDC threshold) distributed across the population?
+    - This will help us understand the data
+2. What is the subset of the population experiencing Insulin Resistance but does not yet have elevated A1C? 
+    - This is our subset of the population that would benefit from early insulin testing
 3. What is the relationship between Diabetes and Insulin Resistance (i.e. Beta Cell Health and Dysfunction) across the entire population?
-4. What is the relationship between Diabetes and Insulin Resistance (i.e. Beta Cell Health and Dysfunction) within the context of Age and BMI, two major risk factors for Diabetes?
+4. What is the relationship between Diabetes and Insulin Resistance within the context of Age and BMI, two major risk factors for Diabetes?
 
 ### **Exploring and reviewing the distribution of data across the population**
 ### Figure 2.1: Population Distribution of Diabetes
@@ -112,7 +114,7 @@ With the data ready for analysis, we are evaluating the following questions:
 - This chart shows how diabetes and insulin resistance change over time as BMI increases. Each data point represents a percentage of the total US population.
 
 ### Normalizing the population
-In order to further evaluate our data effectively, we will want to "normalize" population across our age groups to understand proportionate likelihood of health or dysfunction for a given age group or BMI level, rather than being subjected to skew where population is higher or lower for an age group or BMI (e.g. since population decreases in older age, all data points within that age group look relatively smaller compared to more populous age groups, which makes it harder to spot the overall trends).
+In order to further evaluate our data effectively, we will want to "normalize" population across our age groups to understand proportionate likelihood of health or dysfunction for a given age group or BMI level, rather than being subjected to skew where population is higher or lower for an age group or BMI (e.g. since population decreases in older age, all data points within that age group look relatively smaller compared to more populous age groups, which makes it harder to spot the overall trends if not normalized).
 
 ### Figure 3.1: Likelihood of Beta Cell Health and Dysfunction by Age Group
 <img src="./charts/Figure 3.1 Likelihood of Beta Cell Health and Dysfunction by Age Group.jpg" alt="Figure 3.1: Likelihood of Beta Cell Health and Dysfunction by Age Group" width="1500"/>
