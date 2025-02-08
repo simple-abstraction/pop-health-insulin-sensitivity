@@ -36,7 +36,7 @@ In order to measure Insulin Resistance (or Insulin Sensitivity, with regard to h
 
 Although not in the scope of this analysis, Type 1 Diabetes is an autoimmune condition that occurs at birth, where the body does not produce insulin sufficiently or at all, which causes blood sugar to spike after consumption without supplemental insulin to manage the reaction. It is helpful to know this because Type 1 Diabetics also experience beta cell dysfunction and will be represented to some extent in this data, though it impacts a much smaller percentage of the total population.
 
-Here is a flow chart to help visualize how blood sugar and insulin resistance change in different stages of Diabetes as it progresses:
+Here is a flow chart to help visualize how blood sugar and insulin resistance change as Diabetes develops and progresses:
 <!-- ![The Progression of Diabetes](./charts/The%20Progression%20of%20Diabetes.jpg)  -->
 <img src="./charts/Figure 1.3 The Progression of Diabetes.jpg" alt="Figure 1.3: The Progression of Diabetes" width="1500"/>
 
