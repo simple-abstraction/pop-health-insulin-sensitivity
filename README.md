@@ -53,25 +53,25 @@ After downloading the datasets from the respective components, the following ste
     - This is performed for all 5 components; Glycohemoglobin, Fasting Glucose, Fasting Insulin, Age, & BMI *(the images only show the first two as examples)*
 
 <img src="./charts/ETL-1.1 Reading XPT Files.jpg" alt="ETL 1.1" height="500"/> 
-<img src="./charts/ETL-1.2 Printing XPT Files.jpg" alt="ETL 1.2" height="500"/> 
+<img src="./charts/ETL-1.2 Printing XPT Files.jpg" alt="ETL 1.2" height="400"/> 
 
 2. Merging all of the dataframes into one and cleaning the new dataframe to only see the core fields that we need
 
 3. Dropping all null values from our core data so that we only see records where participants had all information measured (specifically, Glycohemoglobin, Fasting Glucose, Fasting Insulin, Age, and BMI).
     - We would also drop any '0' values (that denote missing data), if there were any that existed.
 
-<img src="./charts/ETL-2.1 Merging and Cleaning.jpg" alt="ETL 2.1" height="500"/> 
+<img src="./charts/ETL-2.1 Merging and Cleaning.jpg" alt="ETL 2.1" width="800"/> 
 
 4. Identify and calculate a new population weight for the filtered data.
     - After filtering to only see participants with core data, none of the original 4 population weights (Glycohemoglobin labs, Fasting labs, Demographics, and Physical Examinations) are able to be used as-is (as some degree of data was dropped from each). Thus, we must calculate a new one, where the population weights for each participant in our filtered data sum up to the original total population.
     - The NHANES documentation recommends utilizing the most restrictive of the weights involved in any analysis, so after calculating the percent of data that would be lost by selecting each of the weights, we can see that the smallest percentage loss by far, with only ~6% of records from the original dataset lost, was the weight for the fasting labs (which is logical as it had the smallest number of original participants).
     - Given that the total population from the original fasting labs was ~280 million, and the sum of the remaining fasting lab weights for our filtered data is ~264 million, we simply scale up our remaining weights by a factor of ~6% to match the original population. We can verify this with simple calculations. Additionally, since the "Total Population" for this data is notably lower than the actual US population of ~350 million due to excluded groups, we will want to use *percentages* of the total population to keep the analysis simple and avoid confusion.
 
-<img src="./charts/ETL-3.1 Identifying Population Weight.jpg" alt="ETL 3.1" width="1000"/>
+<img src="./charts/ETL-3.1 Identifying Population Weight.jpg" alt="ETL 3.1" width="850"/>
 
-<img src="./charts/ETL-3.2 Calculating Population Weight.jpg" alt="ETL 3.2" height="500"/> 
+<img src="./charts/ETL-3.2 Calculating Population Weight.jpg" alt="ETL 3.2" width="850"/> 
 
-<img src="./charts/ETL-3.3 Printing Population Weight Values.jpg" alt="ETL 3.3" height="250"/>  
+<img src="./charts/ETL-3.3 Printing Population Weight Values.jpg" alt="ETL 3.3" width="750"/>  
 
 
 5. Using our new set of data, interpret the following (our core data fields for analysis):
@@ -80,12 +80,13 @@ After downloading the datasets from the respective components, the following ste
     - Age Cohort by Decade (With 12 years being the minimum age for lab data, and all participants over 80 being set == 80 by NHANES)
     - BMI (From underweight to the increasing levels of obesity, as defined in the Official CDC Guidelines)
 
-<img src="./charts/ETL-4.1 Interpreting A1C and HOMA-IR.jpg" alt="ETL 4.1" height="400"/>
+<img src="./charts/ETL-4.1 Interpreting A1C and HOMA-IR.jpg" alt="ETL 4.1" width="800"/>
 
-<img src="./charts/ETL-4.2 Interpreting Age Cohorts.jpg" alt="ETL 4.2" height="350"/> 
-<img src="./charts/ETL-4.3 Interpreting BMI.jpg" alt="ETL 4.3" height="350"/> 
+<img src="./charts/ETL-4.2 Interpreting Age Cohorts.jpg" alt="ETL 4.2" width="600"/> 
 
-6. Final cleaning and review before load into database
+<img src="./charts/ETL-4.3 Interpreting BMI.jpg" alt="ETL 4.3" width="600"/> 
+
+6. Final cleaning and review (before loading into database for further analysis)
     - The printed dataframe shows all fields
     - The described dataframe shows stats for all numerical fields 
 
@@ -93,7 +94,7 @@ After downloading the datasets from the respective components, the following ste
 
 <img src="./charts/ETL-5.2 Final Describe.jpg" alt="ETL 5.2" width="600"/> 
  
-<div style="height:20px;"></div>
+<div style="height:25px;"></div>
  
 Final code and data for review:
 - ![The Python Notebook for this ETL is available here.](./python/nhanes_data_etl_public.ipynb)
