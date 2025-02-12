@@ -1,4 +1,8 @@
-# Measuring Insulin Resistance to Predict Type 2 Diabetes
+# Measuring Insulin Resistance to Predict Type 2 Diabetes 💉
+Diabetes is one of the most widely discussed public health issues. Many of us know someone affected by it, yet few truly understand its root cause: insulin resistance. Despite being a measurable prerequisite to Type 2 Diabetes, insulin resistance is often neglected in routine screenings and early intervention. Furthermore, even though elevated blood sugar is the hallmark trait of Type 2 Diabetes, the standard medications for the disease such as metformin and semaglutide specifically work by improving insulin sensitivity, not by lowering blood sugar. The current approach to treating Diabetes is like ignoring billowing smoke in the distance until a fire is clearly visible. This project aims to demonstrate that insulin resistance can be measured and used to improve public health. 
+
+## Overview 
+
 The standard method for diagnosing and measuring Type 2 Diabetes is primarily based on the popular Hemoglobin A1C test, which measures average blood glucose (blood sugar) over approximately the past 3 months. However, this method alone can result in missing the long window of early detection for the disease by up to decades, as blood glucose will typically only rise once a person is already resistant to their insulin response, which happens progressively over time as beta cells in the pancreas begin to experience dysfunction, and only results in an elevated A1C test once their body's ability to keep blood sugar within a normal range has already become compromised. 
 
 Despite growing awareness of diabetes risk factors such as obesity, aging, and a sedentary lifestyle, routine screenings essentially never include direct assessment of beta cell function or insulin resistance. This gap in early detection means that a significant portion of the population may be unaware that they are already on the path to developing diabetes. Given that the current diagnostic criteria focuses solely on blood glucose levels, early beta cell dysfunction often goes unrecognized, delaying intervention until the disease has already fully developed - at which point the disease becomes significantly harder to reverse.
@@ -8,12 +12,12 @@ This analysis leverages publicly available NHANES data from the CDC to investiga
 By identifying patterns in insulin resistance before overt hyperglycemia (elevated blood sugar) develops, this study highlights the need for a more proactive approach to metabolic health. A shift in screening strategies could allow for earlier interventions that preserve beta cell function and potentially prevent the onset of Type 2 Diabetes altogether.
  
 
-## Objectives and Goals 
+## Objectives 
  1. To demonstrate with a data-driven approach that insulin resistance, when tested, does indeed precede diabetes
  2. Identify a subset of the US population that could benefit from, and be targeted for, an earlier intervention
  3. Consider the role that risk factors such as Age and BMI play in the development of the disease
 
-## An Overview of Diabetes
+## Understanding Diabetes & Insulin Resistance 
 Type 2 Diabetes is a chronic disease that impacts how the body processes sugar, characterized by a decreasingly effective insulin response over time. Insulin is produced by beta cells in the pancreas in order to regulate blood sugar. As a person's insulin becomes less effective at regulating blood sugar, the body has to produce progressively more insulin to keep blood sugar within a normal range. Eventually, as the disease develops and progresses, the beta cells in the pancreas begin to fail, where either they cannot produce enough insulin or the insulin is simply ineffective, and blood sugar will then begin to rise. In advanced stages of the disease, after insulin has stopped being produced, insulin deficiency will occur, requiring injections to maintain blood sugar. As the disease progresses, it becomes much harder to reverse the damage, so early detection and a lifestyle changes (in particular, diet and physical activity) are often essential for improvement. [[1]](https://diabetes.org/living-with-diabetes/type-2/how-type-2-diabetes-progresses)
 
 The disease impacts a significant portion of the US (and global) population, and has continued to rise over time [[2]](https://archive.cdc.gov/www_cdc_gov/diabetes/library/reports/reportcard/national-state-diabetes-trends.html?). It is associated with a variety of health challenges; from obesity and deterioration of health and wellness at the individual level, to population level impacts such as loss of productivity [[3]](https://diabetesjournals.org/care/article/45/11/2553/147546/Productivity-Loss-and-Medical-Costs-Associated?) and significant healthcare costs [[4]](https://diabetes.org/newsroom/press-releases/new-american-diabetes-association-report-finds-annual-costs-diabetes-be) (and given that CMS (Centers for Medicare & Medicaid) is the single largest healthcare payer in the United States [[5]](https://www.cms.gov/cms-guide-medical-technology-companies-and-other-interested-parties/payment), that means the government often absorbs the cost and would also benefit from investing in public health).
@@ -40,8 +44,8 @@ Here is a flow chart to help visualize how blood sugar and insulin resistance ch
 <!-- ![The Progression of Diabetes](./charts/The%20Progression%20of%20Diabetes.jpg)  -->
 <img src="./charts/Figure 1.3 The Progression of Diabetes.jpg" alt="Figure 1.3: The Progression of Diabetes" width="1500"/>
 
-## An Overview of the NHANES Survey
-The NHANES (National Health and Nutrition Examination Survey) is a long-running effort from the CDC to release health data for public use in multi-year cycles. The data is used by government agencies, organizations, and businesses as well as for academic use by instutitions and students. The various surveys administered (broken into "components") are meant to be able to represent the majority of the US population (US citizens, non-institutionalized).
+## The National Health and Nutrition Examination Survey
+The National Health and Nutrition Examination Survey ("NHANES") is a long-running effort from the CDC to release free and accessible population health data in multi-year cycles to help assess and improve public health. The data is used by government agencies, organizations, and businesses as well as for academic use by instutitions and students. The various surveys administered (broken into "components") are meant to be able to represent the majority of the US population (US citizens, non-institutionalized).
 
 The data is available in "components", which include a number of data fields and a population weight that can be used to show how representative a given survey participant is of the entire US population (which is determined by the survey statisticians to abstract out complex demographic and response factors). By joining data across different components and normalizing the population weight to one's filtered data, one can craft a targeted analysis within the scope of anything that the NHANES survey measures.
 
