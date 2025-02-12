@@ -1,4 +1,4 @@
-# Population Health: Measuring Insulin Resistance to Predict Type 2 Diabetes 💉
+# Measuring Insulin Resistance to Predict Type 2 Diabetes and Improve Population Health 💉
 
 Diabetes is one of the most widely discussed public health issues. Many of us know someone affected by it, yet few truly understand its root cause: insulin resistance. Despite being a measurable prerequisite to Type 2 Diabetes, insulin resistance is often neglected in routine screenings and early intervention. Furthermore, even though elevated blood sugar is the hallmark trait of Type 2 Diabetes, the standard medications for the disease such as metformin and semaglutide specifically work by improving insulin sensitivity, not by lowering blood sugar. The current approach to treating Diabetes is like ignoring billowing smoke in the distance until a fire is clearly visible. This project aims to demonstrate that insulin resistance can be measured and used to improve public health. 
 
