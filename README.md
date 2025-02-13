@@ -1,6 +1,6 @@
 # Measuring Insulin Resistance to Predict Type 2 Diabetes and Improve Population Health 💉
 
-Diabetes is one of the most widely discussed public health issues. Many of us know someone affected by it, yet few truly understand its root cause: insulin resistance. Despite being a measurable prerequisite to Type 2 Diabetes, insulin resistance is often neglected in routine screenings and early intervention. Furthermore, even though elevated blood sugar is the hallmark trait of Type 2 Diabetes, the standard medications for the disease such as metformin and semaglutide specifically work by improving insulin sensitivity, not by lowering blood sugar. The current approach to treating Diabetes is like ignoring billowing smoke in the distance until a fire is clearly visible. This project aims to demonstrate that insulin resistance can be measured and used to improve public health. 
+Diabetes is one of the most widely discussed public health issues. Many of us know someone affected by it, yet few truly understand its root cause: insulin resistance. Despite being a measurable prerequisite to Type 2 Diabetes, insulin resistance is often neglected in routine screenings and early intervention. Furthermore, even though elevated blood sugar is the hallmark trait of Type 2 Diabetes, the standard medications for the disease such as metformin and semaglutide work (in different ways) to improve insulin function, not simply directly lower blood sugar. The current approach to treating Diabetes is like ignoring billowing smoke in the distance until a fire is clearly visible. This project aims to demonstrate that insulin resistance can be measured and used to improve public health. 
 
 ## Overview 
 
@@ -10,7 +10,7 @@ Despite growing awareness of diabetes risk factors such as obesity, aging, and a
 
 This analysis leverages publicly available NHANES data from the CDC to investigate insulin resistance at a population level. The findings below ultimately suggest that a substantial proportion of individuals, roughly 35% of the entire US population, exhibits what could be called "covert insulin resistance" - a state in which beta cell function has begun to decline, yet blood glucose remains within normal levels. 
 
-By identifying patterns in insulin resistance before overt hyperglycemia (elevated blood sugar) develops, this study highlights the need for a more proactive approach to metabolic health. A shift in screening strategies could allow for earlier interventions that preserve beta cell function and potentially prevent the onset of Type 2 Diabetes altogether.
+By identifying patterns in insulin resistance before overt hyperglycemia (elevated blood sugar) develops, this project highlights the need for a more proactive approach to metabolic health. A shift in screening strategies could allow for earlier interventions that preserve beta cell function and potentially prevent the onset of Type 2 Diabetes altogether.
  
 
 ## Objectives 
