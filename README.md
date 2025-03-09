@@ -1,6 +1,6 @@
 # Measuring Insulin Resistance to Predict Type 2 Diabetes & Improve Population health 💉
 
-Diabetes is one of the most common diseases impacting public health. Many of us know someone affected by it, yet few are aware of insulin resistance, the underlying driver of the disease. Despite being a measurable prerequisite to Type 2 Diabetes, insulin resistance is often neglected in routine screenings and early intervention. Furthermore, even though elevated blood sugar is the hallmark trait of Type 2 Diabetes, the standard medications for the disease such as metformin and semaglutide work (in different ways) to improve insulin function, not simply directly lower blood sugar. The current approach to treating Diabetes is like ignoring billowing smoke in the distance until a fire is clearly visible. This project aims to demonstrate that insulin resistance can be measured and used to improve public health. 
+Diabetes is one of the most common diseases impacting public health. Many of us know someone affected by it, yet few are aware of insulin resistance, the underlying driver of the disease. Despite being a measurable prerequisite to Type 2 Diabetes, insulin resistance is often neglected in routine screenings and early intervention. Furthermore, even though elevated blood sugar is the hallmark trait of Type 2 Diabetes, common medications for the disease (such as Metformin or Semaglutide) primarily work (in different ways) to improve insulin function, not simply directly lower blood sugar. The current approach to treating Diabetes is like ignoring smoke in the distance until the fire is clearly visible. This project aims to demonstrate that insulin resistance can be measured and used to improve public health. 
 
 ## Overview 
 
@@ -170,14 +170,14 @@ In order to evaluate our data more effectively, we want to standardize the popul
 <img src="./charts/Figure 3.2 Likelihood of Overall Health or Dysfunction by Age Group.jpg" alt="Figure 3.3: Likelihood of Overall Health or Dysfunction by Age Group" width="1500"/>
 
 - This chart only shows those who are healthy (*normal blood sugar and insulin sensitivity*) compared to those who have any form or degree of beta cell dysfunction (*any combination of elevated blood sugar OR insulin*).
-- Although we can see a much greater divergence in older age (particularly around 50 years old and after), there is a large divergence in the youngest age group. This is an anomaly and seems more likely to represent worsening childhood obesity than typical disease progression. Without societal change or public health intervention to improve outcomes, this trend may continue.
-- Aside from the spike in the 12-20 age group, the prevalence of dysfunction increases slowly and consistently with age, with a notably sharp increase around age 50.
+- Although we can greater divergence as age increases, there is a large divergence in the youngest age group. This is an anomaly and seems more likely to represent worsening childhood obesity than typical disease progression. Without societal change or public health intervention to improve outcomes, this trend may continue.
+- Aside from the divergence in the youngest age group of 12-20 years, adults in the 20-40 age range have relatively consistent likelihood of health or dysfunction. Around 45-55 years, there is a sharp spike in the likelihood of dysfunction, which increases slowly and consistently with continued age.
 - With all forms of dysfunction grouped together, we can see that every age group is more likely to experience some form of beta cell dysfunction than healthiness. 
 
 ### Figure 3.3: Likelihood of Beta Cell Health and Dysfunction by BMI
 <img src="./charts/Figure 3.3 Likelihood of Beta Cell Health and Dysfunction by BMI.jpg" alt="Figure 3.2: Likelihood of Beta Cell Health and Dysfunction by BMI" width="1500"/>
 
-- After standardization of the population across BMI thresholds, we can see a clear relationship between weight and beta cell function. As weight increases, it becomes steadily more likely to experience beta cell dysfunction, or progression towards Type 2 Diabetes.
+- After standardization of the population across BMI thresholds, we can see a clear inverse relationship between weight and beta cell function. As weight increases, it becomes steadily more likely to experience beta cell dysfunction, or progression towards Type 2 Diabetes.
 - It is worth noting that, even at a "normal" or "healthy" weight, there is still a non-insignificant degree of insulin-resistance, which may indicate that beta cell dysfunction or diabetes will still progress or develop with age. 
 
 
